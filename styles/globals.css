@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-rgb: 15, 23, 42;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-rgb));
+}
+
+/* Dual Direction Scroll Animations - Full Display Width */
+
+/* Left to Right Animation - Start from left edge to right edge */
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-scroll-left-to-right {
+    animation: scroll-left-to-right 30s linear infinite;
+}
+
+.animate-scroll-left-to-right:hover {
+    animation-play-state: paused;
+}
+
+/* Right to Left Animation - Start from right edge to left edge */
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll-right-to-left {
+    animation: scroll-right-to-left 30s linear infinite;
+}
+
+.animate-scroll-right-to-left:hover {
+    animation-play-state: paused;
+}
