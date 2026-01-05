@@ -67,7 +67,7 @@ export default function AdminDashboard() {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
                 <div className="text-center">
-                    <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="w-16 h-16 border-4 border-violet-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                     <p className="text-gray-600">Loading admin panel...</p>
                 </div>
             </div>
@@ -95,8 +95,8 @@ export default function AdminDashboard() {
                         {/* Total Users */}
                         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
                             <div className="flex items-center justify-between mb-4">
-                                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                                    <Users className="w-6 h-6 text-purple-600" />
+                                <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center">
+                                    <Users className="w-6 h-6 text-violet-600" />
                                 </div>
                                 <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full">
                                     +12%
@@ -109,8 +109,8 @@ export default function AdminDashboard() {
                         {/* Total Images */}
                         <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
                             <div className="flex items-center justify-between mb-4">
-                                <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center">
-                                    <Image className="w-6 h-6 text-pink-600" />
+                                <div className="w-12 h-12 bg-fuchsia-100 rounded-xl flex items-center justify-center">
+                                    <Image className="w-6 h-6 text-fuchsia-600" />
                                 </div>
                                 <span className="text-xs font-semibold text-green-600 bg-green-50 px-2 py-1 rounded-full">
                                     +8%
@@ -155,12 +155,12 @@ export default function AdminDashboard() {
                             <div>
                                 <h2 className="text-xl font-bold text-gray-900 mb-4">Dashboard Overview</h2>
                                 <div className="space-y-4">
-                                    <div className="p-4 bg-purple-50 border border-purple-200 rounded-xl">
+                                    <div className="p-4 bg-violet-50 border border-violet-200 rounded-xl">
                                         <div className="flex items-center gap-3">
-                                            <Shield className="w-5 h-5 text-purple-600" />
+                                            <Shield className="w-5 h-5 text-violet-600" />
                                             <div>
-                                                <h3 className="font-semibold text-purple-900">System Status</h3>
-                                                <p className="text-sm text-purple-700">All systems operational</p>
+                                                <h3 className="font-semibold text-violet-900">System Status</h3>
+                                                <p className="text-sm text-violet-700">All systems operational</p>
                                             </div>
                                         </div>
                                     </div>

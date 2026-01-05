@@ -39,8 +39,8 @@ export default function BlogDetailPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-4 border-purple-500 border-t-transparent"></div>
+            <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-4 border-violet-500 border-t-transparent"></div>
             </div>
         );
     }
@@ -56,7 +56,7 @@ export default function BlogDetailPage() {
                 <meta name="description" content={blog.excerpt} />
             </Head>
 
-            <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
+            <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
                 <Navbar />
 
                 {/* Hero Section with Cover Image */}
@@ -119,14 +119,14 @@ export default function BlogDetailPage() {
                         {/* Tech Stack */}
                         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg">
+                                <div className="p-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-lg">
                                     <Code className="w-6 h-6 text-white" />
                                 </div>
                                 <h2 className="text-2xl font-bold text-gray-900">Tech Stack</h2>
                             </div>
                             <div className="flex flex-wrap gap-3">
                                 {blog.techStack.map((tech, index) => (
-                                    <span key={index} className="px-4 py-2 bg-purple-100 text-purple-700 font-medium rounded-lg">
+                                    <span key={index} className="px-4 py-2 bg-violet-100 text-violet-700 font-medium rounded-lg">
                                         {tech}
                                     </span>
                                 ))}
@@ -186,7 +186,7 @@ export default function BlogDetailPage() {
                         </div>
 
                         {/* Key Learnings */}
-                        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl shadow-lg p-8 mb-8 text-white">
+                        <div className="bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl shadow-lg p-8 mb-8 text-white">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="p-3 bg-white/20 rounded-lg">
                                     <Lightbulb className="w-6 h-6 text-white" />
@@ -219,7 +219,7 @@ export default function BlogDetailPage() {
                                             href={blog.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all"
+                                            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-lg hover:shadow-lg transition-all"
                                         >
                                             <ExternalLink className="w-5 h-5" />
                                             Live Demo
@@ -288,7 +288,7 @@ export default function BlogDetailPage() {
                         {/* Back to Blog Button */}
                         <div className="text-center">
                             <Link href="/blog">
-                                <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all mx-auto">
+                                <button className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-lg hover:shadow-lg transition-all mx-auto">
                                     <ArrowLeft className="w-5 h-5" />
                                     Back to All Posts
                                 </button>

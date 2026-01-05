@@ -24,7 +24,7 @@ export default function AdminNavbar() {
                         placeholder="Search users, images, logs..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                        className="w-full pl-12 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                     />
                 </div>
             </div>
@@ -57,7 +57,7 @@ export default function AdminNavbar() {
                         <p className="font-semibold text-gray-900 text-sm">{user?.name || 'Admin'}</p>
                         <p className="text-xs text-gray-500 capitalize">{user?.role || 'Administrator'}</p>
                     </div>
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full flex items-center justify-center">
                         <span className="text-white font-bold text-sm">
                             {user?.name?.[0]?.toUpperCase() || 'A'}
                         </span>

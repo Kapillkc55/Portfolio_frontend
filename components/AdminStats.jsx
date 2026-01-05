@@ -203,7 +203,7 @@ const AdminStats = () => {
                         {/* Happy Clients */}
                         <div>
                             <label className="flex text-sm font-medium text-gray-700 mb-2 items-center gap-2">
-                                <Users className="w-4 h-4 text-purple-600" />
+                                <Users className="w-4 h-4 text-violet-600" />
                                 Happy Clients
                             </label>
                             <input
@@ -256,7 +256,7 @@ const AdminStats = () => {
                         <button
                             onClick={fetchHistory}
                             disabled={historyLoading}
-                            className="flex items-center gap-2 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed transition-colors"
+                            className="flex items-center gap-2 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:bg-violet-400 disabled:cursor-not-allowed transition-colors"
                         >
                             <History className="w-4 h-4" />
                             View History
@@ -265,7 +265,7 @@ const AdminStats = () => {
                 </div>
 
                 {/* Preview Section */}
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-md p-6 text-white">
+                <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-lg shadow-md p-6 text-white">
                     <h2 className="text-lg font-semibold mb-4">Preview (How it will appear on hero section)</h2>
                     <div className="grid grid-cols-3 gap-6">
                         <div className="text-center">
@@ -290,7 +290,7 @@ const AdminStats = () => {
                             {/* Modal Header */}
                             <div className="flex justify-between items-center p-6 border-b">
                                 <h2 className="text-xl font-bold text-gray-800 flex items-center gap-2">
-                                    <History className="w-5 h-5 text-purple-600" />
+                                    <History className="w-5 h-5 text-violet-600" />
                                     Statistics History
                                 </h2>
                                 <button
@@ -331,9 +331,9 @@ const AdminStats = () => {
                                                         <p className="text-xs text-gray-600">Ongoing</p>
                                                         <p className="text-lg font-semibold text-orange-700">{record.ongoingProjects}</p>
                                                     </div>
-                                                    <div className="bg-purple-50 rounded p-2">
+                                                    <div className="bg-violet-50 rounded p-2">
                                                         <p className="text-xs text-gray-600">Clients</p>
-                                                        <p className="text-lg font-semibold text-purple-700">{record.happyClients}</p>
+                                                        <p className="text-lg font-semibold text-violet-700">{record.happyClients}</p>
                                                     </div>
                                                     <div className="bg-blue-50 rounded p-2">
                                                         <p className="text-xs text-gray-600">Years</p>

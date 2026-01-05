@@ -50,14 +50,14 @@ export default function AboutUs() {
         <section id="about" className="relative min-h-screen py-20 overflow-hidden bg-gradient-to-b from-slate-50 to-white">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-violet-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-fuchsia-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
                 <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
             </div>
 
             {/* Mouse Trailing Effect */}
             <div
-                className="fixed w-96 h-96 rounded-full bg-gradient-to-r from-purple-500/5 to-pink-500/5 pointer-events-none transition-transform duration-100"
+                className="fixed w-96 h-96 rounded-full bg-gradient-to-r from-violet-500/5 to-fuchsia-500/5 pointer-events-none transition-transform duration-100"
                 style={{
                     transform: `translate(${mousePosition.x - 192}px, ${mousePosition.y - 192}px)`,
                 }}
@@ -66,15 +66,15 @@ export default function AboutUs() {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header with Animation */}
                 <div className="text-center mb-16 lg:mb-24">
-                    <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
-                        <Sparkles className="w-4 h-4 text-purple-500" />
-                        <span className="text-sm font-semibold text-purple-600">About Me</span>
+                    <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 border border-violet-500/20">
+                        <Sparkles className="w-4 h-4 text-violet-500" />
+                        <span className="text-sm font-semibold text-violet-600">About Me</span>
                     </div>
                     <h2 className="text-5xl lg:text-7xl font-extrabold mb-6">
-                        <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-violet-600 via-violet-500 to-fuchsia-600 bg-clip-text text-transparent">
                             Crafting Digital
                         </span>
-                        <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-fuchsia-600 via-violet-500 to-violet-600 bg-clip-text text-transparent">
                             Experiences
                         </span>
                     </h2>
@@ -90,7 +90,7 @@ export default function AboutUs() {
                     <div className="relative group">
                         <div className="relative z-10 transform transition-all duration-500 group-hover:scale-105 group-hover:-rotate-2">
                             {/* Glowing Border Effect */}
-                            <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                            <div className="absolute -inset-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
 
                             {/* Image Container */}
                             <div className="relative overflow-hidden rounded-2xl border-4 border-white shadow-2xl">
@@ -113,7 +113,7 @@ export default function AboutUs() {
                                     </div>
                                 </div>
 
-                                <div className="absolute top-6 right-6 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg">
+                                <div className="absolute top-6 right-6 px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-full shadow-lg">
                                     <span className="font-bold">{aboutData?.profile?.badge || "Full Stack Dev"}</span>
                                 </div>
                             </div>
@@ -121,14 +121,14 @@ export default function AboutUs() {
 
                         {/* Floating Elements */}
                         <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-pink-500 to-rose-400 rounded-3xl -rotate-12 opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-fuchsia-500 to-rose-400 rounded-3xl -rotate-12 opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
                     </div>
 
                     {/* Right Column - Text Content */}
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-                                Hi, I'm <span className="text-purple-600">{aboutData?.profile?.name || 'Kapil Raj KC'}</span>
+                                Hi, I'm <span className="text-violet-600">{aboutData?.profile?.name || 'Kapil Raj KC'}</span>
                             </h3>
                             <div className="space-y-4">
                                 {aboutData?.profile?.bio?.map((paragraph, index) => (
@@ -138,7 +138,7 @@ export default function AboutUs() {
                                 )) || (
                                         <>
                                             <p className="text-lg text-slate-700 leading-relaxed">
-                                                A passionate <strong className="text-purple-600">Full Stack Developer</strong> from Kathmandu, Nepal,
+                                                A passionate <strong className="text-violet-600">Full Stack Developer</strong> from Kathmandu, Nepal,
                                                 dedicated to building modern web applications that combine elegant design with powerful functionality.
                                             </p>
                                             <p className="text-lg text-slate-700 leading-relaxed">
@@ -175,7 +175,7 @@ export default function AboutUs() {
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-4 pt-6">
                             <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-slate-200">
-                                <div className="text-3xl font-bold text-purple-600">
+                                <div className="text-3xl font-bold text-violet-600">
                                     {aboutData?.stats?.projects?.value || 50}{aboutData?.stats?.projects?.showPlus !== false && '+'}
                                 </div>
                                 <div className="text-sm text-slate-600">{aboutData?.stats?.projects?.label || 'Projects'}</div>
@@ -187,7 +187,7 @@ export default function AboutUs() {
                                 <div className="text-sm text-slate-600">{aboutData?.stats?.experience?.label || 'Years Exp'}</div>
                             </div>
                             <div className="text-center p-4 bg-white/50 backdrop-blur-sm rounded-xl border border-slate-200">
-                                <div className="text-3xl font-bold text-pink-600">
+                                <div className="text-3xl font-bold text-fuchsia-600">
                                     {aboutData?.stats?.satisfaction?.value || 100}{aboutData?.stats?.satisfaction?.showPlus === true && '+'}%
                                 </div>
                                 <div className="text-sm text-slate-600">{aboutData?.stats?.satisfaction?.label || 'Satisfaction'}</div>
@@ -200,7 +200,7 @@ export default function AboutUs() {
             {/* Technology Slider - 100% Full Width */}
             <div className="w-full mt-20 mb-16 px-0">
                 <div className="text-center mb-12 px-4">
-                    <h3 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    <h3 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-violet-500 to-fuchsia-600 bg-clip-text text-transparent">
                         Technologies I Work With
                     </h3>
                     <p className="text-lg text-slate-600">
@@ -219,7 +219,7 @@ export default function AboutUs() {
                         {[...technologies, ...technologies, ...technologies].map((tech, index) => (
                             <div
                                 key={index}
-                                className="group flex-shrink-0 flex flex-col items-center justify-center min-w-[140px] p-6 bg-white/80 backdrop-blur-sm rounded-2xl border-2 border-slate-200 hover:border-purple-500 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2 cursor-pointer"
+                                className="group flex-shrink-0 flex flex-col items-center justify-center min-w-[140px] p-6 bg-white/80 backdrop-blur-sm rounded-2xl border-2 border-slate-200 hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 cursor-pointer"
                             >
                                 <div className="text-5xl mb-3 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     {tech.iconUrl ? (

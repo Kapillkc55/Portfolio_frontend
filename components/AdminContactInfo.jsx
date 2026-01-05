@@ -77,7 +77,7 @@ export default function AdminContactInfo() {
     if (loading) {
         return (
             <div className="flex items-center justify-center py-20">
-                <Loader2 className="w-8 h-8 animate-spin text-purple-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-violet-600" />
             </div>
         );
     }
@@ -96,7 +96,7 @@ export default function AdminContactInfo() {
                     {/* Email */}
                     <div>
                         <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
-                            <Mail className="w-4 h-4 text-purple-600" />
+                            <Mail className="w-4 h-4 text-violet-600" />
                             Email Address
                         </label>
                         <input
@@ -105,7 +105,7 @@ export default function AdminContactInfo() {
                             value={contactInfo.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all"
                             placeholder="your.email@example.com"
                         />
                     </div>
@@ -149,7 +149,7 @@ export default function AdminContactInfo() {
                         <button
                             type="submit"
                             disabled={saving}
-                            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-lg hover:from-violet-700 hover:to-fuchsia-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {saving ? (
                                 <>
@@ -168,16 +168,16 @@ export default function AdminContactInfo() {
             </div>
 
             {/* Preview */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border-2 border-purple-200 p-6">
+            <div className="bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl border-2 border-violet-200 p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Preview</h3>
                 <div className="space-y-4">
                     {/* Email Preview */}
                     <div className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 flex items-center justify-center">
                             <Mail className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                            <p className="text-xs font-semibold text-purple-600">Email</p>
+                            <p className="text-xs font-semibold text-violet-600">Email</p>
                             <p className="text-sm text-gray-900 font-medium">{contactInfo.email}</p>
                         </div>
                     </div>

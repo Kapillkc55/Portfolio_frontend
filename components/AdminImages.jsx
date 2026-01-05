@@ -297,14 +297,14 @@ const AdminImages = () => {
                 <div className="mb-6 flex justify-between items-center">
                     <div>
                         <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                            <ImageIcon className="w-7 h-7 text-purple-600" />
+                            <ImageIcon className="w-7 h-7 text-violet-600" />
                             Image Management
                         </h1>
                         <p className="text-gray-600 mt-1">Upload and manage portfolio images on Cloudinary</p>
                     </div>
                     <button
                         onClick={() => setShowUploadModal(true)}
-                        className="flex items-center gap-2 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                        className="flex items-center gap-2 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
                     >
                         <Plus className="w-4 h-4" />
                         Upload Image
@@ -335,9 +335,9 @@ const AdminImages = () => {
                         <div className="flex items-center justify-between">
                             <div>
                                 <p className="text-gray-600 text-sm">Projects</p>
-                                <p className="text-2xl font-bold text-purple-600">{stats.byCategory?.project || 0}</p>
+                                <p className="text-2xl font-bold text-violet-600">{stats.byCategory?.project || 0}</p>
                             </div>
-                            <Grid className="w-10 h-10 text-purple-500" />
+                            <Grid className="w-10 h-10 text-violet-500" />
                         </div>
                     </div>
                     <div className="bg-white rounded-lg shadow p-4">
@@ -363,7 +363,7 @@ const AdminImages = () => {
                                     placeholder="Search images..."
                                     value={filters.search}
                                     onChange={(e) => setFilters(prev => ({ ...prev, search: e.target.value, page: 1 }))}
-                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                 />
                             </div>
                         </div>
@@ -372,7 +372,7 @@ const AdminImages = () => {
                         <select
                             value={filters.category}
                             onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value, page: 1 }))}
-                            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                         >
                             <option value="">All Categories</option>
                             {categories.map(cat => (
@@ -384,7 +384,7 @@ const AdminImages = () => {
                         <select
                             value={filters.isActive}
                             onChange={(e) => setFilters(prev => ({ ...prev, isActive: e.target.value, page: 1 }))}
-                            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                         >
                             <option value="">All Status</option>
                             <option value="true">Active</option>
@@ -395,13 +395,13 @@ const AdminImages = () => {
                         <div className="flex gap-2 border border-gray-300 rounded-lg p-1">
                             <button
                                 onClick={() => setViewMode('grid')}
-                                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-violet-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                             >
                                 <Grid className="w-5 h-5" />
                             </button>
                             <button
                                 onClick={() => setViewMode('list')}
-                                className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}
+                                className={`p-2 rounded ${viewMode === 'list' ? 'bg-violet-600 text-white' : 'text-gray-600 hover:bg-gray-100'}`}
                             >
                                 <List className="w-5 h-5" />
                             </button>
@@ -423,7 +423,7 @@ const AdminImages = () => {
                 {/* Images Display */}
                 {loading ? (
                     <div className="text-center py-12">
-                        <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                        <div className="w-16 h-16 border-4 border-violet-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
                         <p className="text-gray-600 mt-4">Loading images...</p>
                     </div>
                 ) : images.length === 0 ? (
@@ -432,7 +432,7 @@ const AdminImages = () => {
                         <p className="text-gray-600 text-lg">No images found</p>
                         <button
                             onClick={() => setShowUploadModal(true)}
-                            className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                            className="mt-4 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                         >
                             Upload Your First Image
                         </button>
@@ -586,7 +586,7 @@ const AdminImages = () => {
                         <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                             <div className="flex justify-between items-center p-6 border-b">
                                 <h2 className="text-xl font-bold text-gray-800 flex items-center gap-2">
-                                    <Upload className="w-5 h-5 text-purple-600" />
+                                    <Upload className="w-5 h-5 text-violet-600" />
                                     Upload New Image
                                 </h2>
                                 <button
@@ -611,7 +611,7 @@ const AdminImages = () => {
                                         accept="image/*"
                                         onChange={handleFileSelect}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                     {previewUrl && (
                                         <img
@@ -632,7 +632,7 @@ const AdminImages = () => {
                                         value={uploadData.title}
                                         onChange={(e) => setUploadData({ ...uploadData, title: e.target.value })}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                 </div>
 
@@ -645,7 +645,7 @@ const AdminImages = () => {
                                         value={uploadData.description}
                                         onChange={(e) => setUploadData({ ...uploadData, description: e.target.value })}
                                         rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                 </div>
 
@@ -658,7 +658,7 @@ const AdminImages = () => {
                                         value={uploadData.category}
                                         onChange={(e) => setUploadData({ ...uploadData, category: e.target.value })}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     >
                                         {categories.map(cat => (
                                             <option key={cat} value={cat}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
@@ -676,7 +676,7 @@ const AdminImages = () => {
                                         value={uploadData.tags}
                                         onChange={(e) => setUploadData({ ...uploadData, tags: e.target.value })}
                                         placeholder="react, nextjs, portfolio"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                 </div>
 
@@ -689,14 +689,14 @@ const AdminImages = () => {
                                         type="text"
                                         value={uploadData.altText}
                                         onChange={(e) => setUploadData({ ...uploadData, altText: e.target.value })}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed transition-colors"
+                                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:bg-violet-400 disabled:cursor-not-allowed transition-colors"
                                 >
                                     <Upload className="w-5 h-5" />
                                     {loading ? 'Uploading...' : 'Upload Image'}

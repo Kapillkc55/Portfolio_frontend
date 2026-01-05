@@ -18,17 +18,17 @@ const AdminProjects = () => {
         technologies: [''],
         githubUrl: '',
         liveUrl: '',
-        gradient: 'from-purple-500 to-pink-500',
+        gradient: 'from-violet-500 to-fuchsia-500',
         featured: false
     });
 
     const gradientOptions = [
-        { value: 'from-purple-500 to-pink-500', label: 'Purple to Pink', preview: 'from-purple-500 to-pink-500' },
+        { value: 'from-violet-500 to-fuchsia-500', label: 'Purple to Pink', preview: 'from-violet-500 to-fuchsia-500' },
         { value: 'from-cyan-500 to-blue-500', label: 'Cyan to Blue', preview: 'from-cyan-500 to-blue-500' },
-        { value: 'from-pink-500 to-rose-500', label: 'Pink to Rose', preview: 'from-pink-500 to-rose-500' },
+        { value: 'from-fuchsia-500 to-rose-500', label: 'Pink to Rose', preview: 'from-fuchsia-500 to-rose-500' },
         { value: 'from-green-500 to-emerald-500', label: 'Green to Emerald', preview: 'from-green-500 to-emerald-500' },
         { value: 'from-orange-500 to-red-500', label: 'Orange to Red', preview: 'from-orange-500 to-red-500' },
-        { value: 'from-indigo-500 to-purple-500', label: 'Indigo to Purple', preview: 'from-indigo-500 to-purple-500' }
+        { value: 'from-indigo-500 to-violet-500', label: 'Indigo to Purple', preview: 'from-indigo-500 to-violet-500' }
     ];
 
     useEffect(() => {
@@ -76,7 +76,7 @@ const AdminProjects = () => {
                 technologies: [''],
                 githubUrl: '',
                 liveUrl: '',
-                gradient: 'from-purple-500 to-pink-500',
+                gradient: 'from-violet-500 to-fuchsia-500',
                 featured: false
             });
         }
@@ -242,7 +242,7 @@ const AdminProjects = () => {
         return (
             <div className="flex items-center justify-center min-h-screen">
                 <div className="text-center">
-                    <FolderGit2 className="w-12 h-12 text-purple-600 mx-auto mb-4 animate-pulse" />
+                    <FolderGit2 className="w-12 h-12 text-violet-600 mx-auto mb-4 animate-pulse" />
                     <p className="text-gray-600">Loading projects...</p>
                 </div>
             </div>
@@ -257,14 +257,14 @@ const AdminProjects = () => {
                     <div className="flex justify-between items-center">
                         <div>
                             <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                                <FolderGit2 className="w-7 h-7 text-purple-600" />
+                                <FolderGit2 className="w-7 h-7 text-violet-600" />
                                 Projects Management
                             </h1>
                             <p className="text-gray-600 mt-1">Manage your portfolio projects</p>
                         </div>
                         <button
                             onClick={() => handleOpenModal()}
-                            className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                            className="flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
                         >
                             <Plus className="w-5 h-5" />
                             Add Project
@@ -280,7 +280,7 @@ const AdminProjects = () => {
                             <p className="text-gray-600 mb-4">No projects added yet</p>
                             <button
                                 onClick={() => handleOpenModal()}
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                className="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                             >
                                 <Plus className="w-4 h-4" />
                                 Add Your First Project
@@ -315,7 +315,7 @@ const AdminProjects = () => {
                                             className="hidden"
                                             disabled={uploadingImage}
                                         />
-                                        <div className="flex items-center gap-2 px-3 py-2 bg-white/90 backdrop-blur-sm rounded-lg hover:bg-purple-500 hover:text-white transition-all text-sm font-medium shadow-lg">
+                                        <div className="flex items-center gap-2 px-3 py-2 bg-white/90 backdrop-blur-sm rounded-lg hover:bg-violet-500 hover:text-white transition-all text-sm font-medium shadow-lg">
                                             <Upload className="w-4 h-4" />
                                             {uploadingImage ? 'Uploading...' : 'Change'}
                                         </div>
@@ -338,7 +338,7 @@ const AdminProjects = () => {
                                             </span>
                                         ))}
                                         {project.technologies.length > 3 && (
-                                            <span className="px-2 py-1 text-xs font-semibold rounded-lg bg-purple-100 text-purple-700">
+                                            <span className="px-2 py-1 text-xs font-semibold rounded-lg bg-violet-100 text-violet-700">
                                                 +{project.technologies.length - 3} more
                                             </span>
                                         )}
@@ -351,7 +351,7 @@ const AdminProjects = () => {
                                                 href={project.githubUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-1 text-sm text-gray-600 hover:text-purple-600"
+                                                className="flex items-center gap-1 text-sm text-gray-600 hover:text-violet-600"
                                             >
                                                 <Github className="w-4 h-4" />
                                                 GitHub
@@ -362,7 +362,7 @@ const AdminProjects = () => {
                                                 href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-1 text-sm text-gray-600 hover:text-purple-600"
+                                                className="flex items-center gap-1 text-sm text-gray-600 hover:text-violet-600"
                                             >
                                                 <ExternalLink className="w-4 h-4" />
                                                 Live
@@ -416,7 +416,7 @@ const AdminProjects = () => {
                                         type="text"
                                         value={formData.title}
                                         onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         placeholder="E-Commerce Platform"
                                         required
                                     />
@@ -431,7 +431,7 @@ const AdminProjects = () => {
                                         value={formData.description}
                                         onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                                         rows="2"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         placeholder="Brief project description (1-2 sentences)"
                                         required
                                     />
@@ -446,7 +446,7 @@ const AdminProjects = () => {
                                         value={formData.fullDescription}
                                         onChange={(e) => setFormData({ ...formData, fullDescription: e.target.value })}
                                         rows="4"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         placeholder="Detailed project description with features and capabilities"
                                         required
                                     />
@@ -463,7 +463,7 @@ const AdminProjects = () => {
                                                 type="text"
                                                 value={tech}
                                                 onChange={(e) => updateTechnology(index, e.target.value)}
-                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                                 placeholder="React, Node.js, etc."
                                             />
                                             {formData.technologies.length > 1 && (
@@ -480,7 +480,7 @@ const AdminProjects = () => {
                                     <button
                                         type="button"
                                         onClick={addTechnology}
-                                        className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+                                        className="text-sm text-violet-600 hover:text-violet-700 font-medium"
                                     >
                                         + Add Technology
                                     </button>
@@ -497,7 +497,7 @@ const AdminProjects = () => {
                                             type="url"
                                             value={formData.githubUrl}
                                             onChange={(e) => setFormData({ ...formData, githubUrl: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="https://github.com/username/repo"
                                         />
                                     </div>
@@ -511,7 +511,7 @@ const AdminProjects = () => {
                                             type="url"
                                             value={formData.liveUrl}
                                             onChange={(e) => setFormData({ ...formData, liveUrl: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="https://project-demo.com"
                                         />
                                     </div>
@@ -526,7 +526,7 @@ const AdminProjects = () => {
                                         <select
                                             value={formData.gradient}
                                             onChange={(e) => setFormData({ ...formData, gradient: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         >
                                             {gradientOptions.map(opt => (
                                                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -543,7 +543,7 @@ const AdminProjects = () => {
                                         id="featured"
                                         checked={formData.featured}
                                         onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                                        className="w-5 h-5 text-purple-600 rounded focus:ring-2 focus:ring-purple-500"
+                                        className="w-5 h-5 text-violet-600 rounded focus:ring-2 focus:ring-violet-500"
                                     />
                                     <label htmlFor="featured" className="text-sm font-medium text-gray-700 flex items-center gap-2">
                                         <Star className="w-4 h-4" />
@@ -563,7 +563,7 @@ const AdminProjects = () => {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400 transition-colors"
+                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:bg-violet-400 transition-colors"
                                     >
                                         <Save className="w-5 h-5" />
                                         {loading ? 'Saving...' : editingProject ? 'Update Project' : 'Add Project'}

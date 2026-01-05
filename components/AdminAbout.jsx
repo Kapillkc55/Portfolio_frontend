@@ -19,7 +19,7 @@ const AdminAbout = () => {
     const [newExpertise, setNewExpertise] = useState({
         title: '',
         description: '',
-        color: 'from-purple-500 to-pink-500',
+        color: 'from-violet-500 to-fuchsia-500',
         icon: 'Zap'
     });
 
@@ -32,11 +32,11 @@ const AdminAbout = () => {
     const iconOptions = ['Zap', 'Layers', 'Target', 'Heart', 'Code', 'Briefcase', 'Award'];
     const colorOptions = [
         'from-yellow-500 to-orange-500',
-        'from-purple-500 to-pink-500',
+        'from-violet-500 to-fuchsia-500',
         'from-blue-500 to-cyan-500',
         'from-red-500 to-rose-500',
         'from-green-500 to-emerald-500',
-        'from-indigo-500 to-purple-500'
+        'from-indigo-500 to-violet-500'
     ];
 
     // Fetch about content
@@ -182,7 +182,7 @@ const AdminAbout = () => {
             if (data.success) {
                 toast.success('Expertise added successfully!');
                 setShowAddExpertise(false);
-                setNewExpertise({ title: '', description: '', color: 'from-purple-500 to-pink-500', icon: 'Zap' });
+                setNewExpertise({ title: '', description: '', color: 'from-violet-500 to-fuchsia-500', icon: 'Zap' });
                 fetchAbout();
             } else {
                 toast.error(data.message || 'Failed to add expertise');
@@ -342,7 +342,7 @@ const AdminAbout = () => {
         return (
             <div className="p-6 flex items-center justify-center min-h-screen">
                 <div className="text-center">
-                    <div className="w-16 h-16 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <div className="w-16 h-16 border-4 border-violet-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                     <p className="text-gray-600">Loading content...</p>
                 </div>
             </div>
@@ -355,7 +355,7 @@ const AdminAbout = () => {
                 {/* Header */}
                 <div className="mb-6">
                     <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                        <User className="w-7 h-7 text-purple-600" />
+                        <User className="w-7 h-7 text-violet-600" />
                         About Page Management
                     </h1>
                     <p className="text-gray-600 mt-1">Manage all content on the About page</p>
@@ -367,8 +367,8 @@ const AdminAbout = () => {
                         <button
                             onClick={() => setActiveTab('profile')}
                             className={`px-6 py-3 font-medium transition-colors ${activeTab === 'profile'
-                                ? 'border-b-2 border-purple-600 text-purple-600'
-                                : 'text-gray-600 hover:text-purple-600'
+                                ? 'border-b-2 border-violet-600 text-violet-600'
+                                : 'text-gray-600 hover:text-violet-600'
                                 }`}
                         >
                             Profile & Bio
@@ -376,8 +376,8 @@ const AdminAbout = () => {
                         <button
                             onClick={() => setActiveTab('expertise')}
                             className={`px-6 py-3 font-medium transition-colors ${activeTab === 'expertise'
-                                ? 'border-b-2 border-purple-600 text-purple-600'
-                                : 'text-gray-600 hover:text-purple-600'
+                                ? 'border-b-2 border-violet-600 text-violet-600'
+                                : 'text-gray-600 hover:text-violet-600'
                                 }`}
                         >
                             Expertise
@@ -385,8 +385,8 @@ const AdminAbout = () => {
                         <button
                             onClick={() => setActiveTab('stats')}
                             className={`px-6 py-3 font-medium transition-colors ${activeTab === 'stats'
-                                ? 'border-b-2 border-purple-600 text-purple-600'
-                                : 'text-gray-600 hover:text-purple-600'
+                                ? 'border-b-2 border-violet-600 text-violet-600'
+                                : 'text-gray-600 hover:text-violet-600'
                                 }`}
                         >
                             Statistics
@@ -394,8 +394,8 @@ const AdminAbout = () => {
                         <button
                             onClick={() => setActiveTab('technologies')}
                             className={`px-6 py-3 font-medium transition-colors ${activeTab === 'technologies'
-                                ? 'border-b-2 border-purple-600 text-purple-600'
-                                : 'text-gray-600 hover:text-purple-600'
+                                ? 'border-b-2 border-violet-600 text-violet-600'
+                                : 'text-gray-600 hover:text-violet-600'
                                 }`}
                         >
                             Technologies
@@ -415,7 +415,7 @@ const AdminAbout = () => {
                                     ...about,
                                     profile: { ...about.profile, name: e.target.value }
                                 })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                             />
                         </div>
 
@@ -442,7 +442,7 @@ const AdminAbout = () => {
                                     <img
                                         src={previewUrl}
                                         alt="Preview"
-                                        className="w-48 h-48 object-cover rounded-lg border-2 border-purple-300"
+                                        className="w-48 h-48 object-cover rounded-lg border-2 border-violet-300"
                                     />
                                 </div>
                             )}
@@ -457,8 +457,8 @@ const AdminAbout = () => {
                                         file:mr-4 file:py-2 file:px-4
                                         file:rounded-lg file:border-0
                                         file:text-sm file:font-semibold
-                                        file:bg-purple-50 file:text-purple-700
-                                        hover:file:bg-purple-100"
+                                        file:bg-violet-50 file:text-violet-700
+                                        hover:file:bg-violet-100"
                                 />
                                 {selectedFile && (
                                     <button
@@ -488,7 +488,7 @@ const AdminAbout = () => {
                                         status: { ...about.profile.status, text: e.target.value }
                                     }
                                 })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                             />
                         </div>
 
@@ -501,7 +501,7 @@ const AdminAbout = () => {
                                     ...about,
                                     profile: { ...about.profile, badge: e.target.value }
                                 })}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                             />
                         </div>
 
@@ -520,7 +520,7 @@ const AdminAbout = () => {
                                             });
                                         }}
                                         rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                     />
                                 </div>
                             ))}
@@ -529,7 +529,7 @@ const AdminAbout = () => {
                         <button
                             onClick={handleUpdateContent}
                             disabled={loading}
-                            className="flex items-center gap-2 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400"
+                            className="flex items-center gap-2 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:bg-violet-400"
                         >
                             <Save className="w-4 h-4" />
                             {loading ? 'Saving...' : 'Save Changes'}
@@ -544,7 +544,7 @@ const AdminAbout = () => {
                             <h2 className="text-lg font-semibold">Expertise Items</h2>
                             <button
                                 onClick={() => setShowAddExpertise(true)}
-                                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                             >
                                 <Plus className="w-4 h-4" />
                                 Add Expertise
@@ -634,7 +634,7 @@ const AdminAbout = () => {
                                         <button
                                             onClick={handleAddExpertise}
                                             disabled={loading}
-                                            className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                            className="w-full px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                                         >
                                             {loading ? 'Adding...' : 'Add Expertise'}
                                         </button>
@@ -701,7 +701,7 @@ const AdminAbout = () => {
                         <button
                             onClick={handleUpdateContent}
                             disabled={loading}
-                            className="flex items-center gap-2 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                            className="flex items-center gap-2 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                         >
                             <Save className="w-4 h-4" />
                             {loading ? 'Saving...' : 'Save Statistics'}
@@ -716,7 +716,7 @@ const AdminAbout = () => {
                             <h2 className="text-lg font-semibold">Technologies ({about.technologies?.length})</h2>
                             <button
                                 onClick={() => setShowAddTech(true)}
-                                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                             >
                                 <Plus className="w-4 h-4" />
                                 Add Technology
@@ -753,7 +753,7 @@ const AdminAbout = () => {
                                                 onChange={(e) => handleTechIconUpload(tech._id, e.target.files[0])}
                                                 className="hidden"
                                             />
-                                            <div className="text-xs text-purple-600 hover:text-purple-700 flex items-center gap-1">
+                                            <div className="text-xs text-violet-600 hover:text-violet-700 flex items-center gap-1">
                                                 <Upload className="w-3 h-3" />
                                                 Upload
                                             </div>
@@ -815,7 +815,7 @@ const AdminAbout = () => {
                                         <button
                                             onClick={handleAddTechnology}
                                             disabled={loading}
-                                            className="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                            className="w-full px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                                         >
                                             {loading ? 'Adding...' : 'Add Technology'}
                                         </button>

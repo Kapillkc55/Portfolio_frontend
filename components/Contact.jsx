@@ -38,19 +38,19 @@ export default function Contact() {
         <section id="contact" className="relative min-h-screen py-20 lg:py-32 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute inset-0">
-                <div className="absolute top-20 right-10 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-                <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                <div className="absolute top-20 right-10 w-96 h-96 bg-violet-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+                <div className="absolute bottom-20 left-10 w-96 h-96 bg-fuchsia-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
                 <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
             </div>
 
             <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 lg:mb-20">
-                    <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
-                        <Send className="w-4 h-4 text-purple-500" />
-                        <span className="text-sm font-semibold text-purple-600">Get In Touch</span>
+                    <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 border border-violet-500/20">
+                        <Send className="w-4 h-4 text-violet-500" />
+                        <span className="text-sm font-semibold text-violet-600">Get In Touch</span>
                     </div>
-                    <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+                    <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-violet-600 via-violet-500 to-fuchsia-600 bg-clip-text text-transparent">
                         Contact Me
                     </h2>
                     <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -69,21 +69,21 @@ export default function Contact() {
                             <div className="space-y-6">
                                 {loading ? (
                                     <div className="flex items-center justify-center py-8">
-                                        <Loader2 className="w-8 h-8 animate-spin text-purple-600" />
+                                        <Loader2 className="w-8 h-8 animate-spin text-violet-600" />
                                     </div>
                                 ) : (
                                     <>
                                         {/* Email */}
                                         <div className="group">
-                                            <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                            <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-violet-50 to-fuchsia-50 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                                                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                                     <Mail className="w-6 h-6 text-white" />
                                                 </div>
                                                 <div>
-                                                    <p className="text-sm font-semibold text-purple-600 mb-1">Email</p>
+                                                    <p className="text-sm font-semibold text-violet-600 mb-1">Email</p>
                                                     <a
                                                         href={`mailto:${contactInfo.email}`}
-                                                        className="text-slate-900 font-medium hover:text-purple-600 transition-colors duration-300"
+                                                        className="text-slate-900 font-medium hover:text-violet-600 transition-colors duration-300"
                                                     >
                                                         {contactInfo.email}
                                                     </a>

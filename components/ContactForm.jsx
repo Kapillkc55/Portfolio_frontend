@@ -137,14 +137,14 @@ export default function ContactForm() {
                         onChange={handleChange}
                         required
                         minLength={2}
-                        placeholder="John Doe"
-                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                        placeholder="Kapil Raj KC"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
                     />
                 </div>
 
                 {/* Email Field */}
                 <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-sm font-semibold text-violet-600 mb-2">
                         Email
                     </label>
                     <input
@@ -153,8 +153,8 @@ export default function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        placeholder="john@example.com"
-                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                        placeholder="kapilrajkc10@gmail.com"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
                     />
                 </div>
 
@@ -171,7 +171,7 @@ export default function ContactForm() {
                         minLength={10}
                         rows="6"
                         placeholder="Tell me about your project..."
-                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors resize-none"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors resize-none"
                     ></textarea>
                 </div>
 
@@ -179,7 +179,7 @@ export default function ContactForm() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-violet-500/50 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {loading ? (
                         <>

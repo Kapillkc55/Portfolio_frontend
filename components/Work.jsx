@@ -29,7 +29,7 @@ export default function Work() {
         return (
             <section id="projects" className="min-h-screen py-20 lg:py-32 bg-gradient-to-b from-white via-slate-50 to-white flex items-center justify-center">
                 <div className="text-center">
-                    <Code2 className="w-12 h-12 text-purple-600 mx-auto mb-4 animate-pulse" />
+                    <Code2 className="w-12 h-12 text-violet-600 mx-auto mb-4 animate-pulse" />
                     <p className="text-gray-600">Loading projects...</p>
                 </div>
             </section>
@@ -44,7 +44,7 @@ export default function Work() {
             <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-16 lg:mb-24">
-                    <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                    <h2 className="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-violet-600 to-fuchsia-500 bg-clip-text text-transparent">
                         My Work & Projects
                     </h2>
                     <p className="text-xl lg:text-2xl text-slate-600 font-medium max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ export default function Work() {
                             >
                                 {/* Image Side */}
                                 <div className="w-full lg:w-1/2 relative">
-                                    <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl transition-all duration-500 group-hover:shadow-purple-500/30 group-hover:-translate-y-2">
+                                    <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl transition-all duration-500 group-hover:shadow-violet-500/30 group-hover:-translate-y-2">
                                         {/* Gradient Overlay */}
                                         <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 mix-blend-multiply z-10`}></div>
 
@@ -86,7 +86,7 @@ export default function Work() {
                                                     href={project.githubUrl}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="p-3 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-purple-500 text-slate-700 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                                                    className="p-3 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-violet-500 text-slate-700 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg"
                                                 >
                                                     <Github className="w-5 h-5" />
                                                 </a>
@@ -96,7 +96,7 @@ export default function Work() {
                                                     href={project.liveUrl}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="p-3 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-purple-500 text-slate-700 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg"
+                                                    className="p-3 rounded-xl bg-white/90 backdrop-blur-sm hover:bg-violet-500 text-slate-700 hover:text-white transition-all duration-300 hover:scale-110 shadow-lg"
                                                 >
                                                     <ExternalLink className="w-5 h-5" />
                                                 </a>
@@ -111,12 +111,12 @@ export default function Work() {
                                 {/* Content Side */}
                                 <div className="w-full lg:w-1/2 space-y-6">
                                     {/* Project Number */}
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
-                                        <span className="text-sm font-bold text-purple-600">Project {String(index + 1).padStart(2, '0')}</span>
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 border border-violet-500/20">
+                                        <span className="text-sm font-bold text-violet-600">Project {String(index + 1).padStart(2, '0')}</span>
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 group-hover:text-purple-600 transition-colors duration-300">
+                                    <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 group-hover:text-violet-600 transition-colors duration-300">
                                         {project.title}
                                     </h3>
 
@@ -130,7 +130,7 @@ export default function Work() {
                                         {project.technologies.map((tech, techIndex) => (
                                             <span
                                                 key={techIndex}
-                                                className="px-4 py-2 text-sm lg:text-base font-semibold rounded-xl bg-white border-2 border-slate-200 text-slate-700 hover:border-purple-500 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 shadow-sm"
+                                                className="px-4 py-2 text-sm lg:text-base font-semibold rounded-xl bg-white border-2 border-slate-200 text-slate-700 hover:border-violet-500 hover:text-violet-600 hover:bg-violet-50 transition-all duration-300 shadow-sm"
                                             >
                                                 {tech}
                                             </span>

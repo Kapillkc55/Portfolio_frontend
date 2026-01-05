@@ -203,7 +203,7 @@ export default function HeroSection() {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        placeholder="John Doe"
+                                        placeholder="Kapil Raj KC"
                                         className="form-input"
                                         required
                                     />
@@ -219,7 +219,7 @@ export default function HeroSection() {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="john@example.com"
+                                        placeholder="kapilrajkc10@gmail.com"
                                         className="form-input"
                                         required
                                     />

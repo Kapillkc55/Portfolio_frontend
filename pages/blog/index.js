@@ -69,22 +69,22 @@ export default function BlogPage() {
                 <meta name="description" content="Technical blog posts and project case studies" />
             </Head>
 
-            <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
+            <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
                 <Navbar />
 
                 {/* Hero Section */}
                 <section className="pt-32 pb-16 px-4">
                     <div className="max-w-7xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-violet-100 text-violet-700 rounded-full mb-6">
                             <BookOpen className="w-5 h-5" />
                             <span className="font-semibold">Blog & Case Studies</span>
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                            <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-transparent bg-clip-text">
+                            <span className="bg-gradient-to-r from-violet-600 via-violet-500 to-fuchsia-600 text-transparent bg-clip-text">
                                 Technical Insights
                             </span>
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-xl text-violet-600 max-w-2xl mx-auto font-medium">
                             Explore detailed case studies, technical deep dives, and learnings from real-world projects
                         </p>
                     </div>
@@ -97,13 +97,13 @@ export default function BlogPage() {
                             <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-4 mb-6">
                                 {/* Search */}
                                 <div className="flex-1 relative group">
-                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 group-focus-within:text-purple-600 transition-colors" />
+                                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 group-focus-within:text-violet-600 transition-colors" />
                                     <input
                                         type="text"
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="Search blogs..."
-                                        className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all"
+                                        className="w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all"
                                     />
                                 </div>
 
@@ -114,7 +114,7 @@ export default function BlogPage() {
                                         setSelectedTag(e.target.value);
                                         setPage(1);
                                     }}
-                                    className="px-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white transition-all cursor-pointer hover:border-gray-300"
+                                    className="px-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-violet-500 bg-white transition-all cursor-pointer hover:border-gray-300"
                                 >
                                     <option value="">All Tags</option>
                                     {allTags.map((tag, index) => (
@@ -123,7 +123,7 @@ export default function BlogPage() {
                                 </select>
 
                                 {/* Featured Toggle */}
-                                <label className="flex items-center gap-3 px-5 py-3.5 border-2 border-gray-200 rounded-xl cursor-pointer hover:bg-purple-50 hover:border-purple-300 transition-all">
+                                <label className="flex items-center gap-3 px-5 py-3.5 border-2 border-gray-200 rounded-xl cursor-pointer hover:bg-violet-50 hover:border-violet-300 transition-all">
                                     <input
                                         type="checkbox"
                                         checked={showFeaturedOnly}
@@ -131,7 +131,7 @@ export default function BlogPage() {
                                             setShowFeaturedOnly(e.target.checked);
                                             setPage(1);
                                         }}
-                                        className="w-5 h-5 text-purple-600 rounded focus:ring-purple-500 cursor-pointer"
+                                        className="w-5 h-5 text-violet-600 rounded focus:ring-violet-500 cursor-pointer"
                                     />
                                     <Star className="w-5 h-5 text-yellow-500" />
                                     <span className="font-medium text-gray-700 whitespace-nowrap">Featured</span>
@@ -139,7 +139,7 @@ export default function BlogPage() {
 
                                 <button
                                     type="submit"
-                                    className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
+                                    className="px-8 py-3.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-[1.02] transition-all duration-200"
                                 >
                                     Search
                                 </button>
@@ -150,7 +150,7 @@ export default function BlogPage() {
                                 <div className="flex flex-wrap gap-3 items-center pt-4 border-t border-gray-200">
                                     <span className="text-sm text-gray-600 font-semibold">Active Filters:</span>
                                     {searchQuery && (
-                                        <span className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 rounded-xl text-sm font-medium shadow-sm">
+                                        <span className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-100 to-fuchsia-100 text-violet-700 rounded-xl text-sm font-medium shadow-sm">
                                             Search: "{searchQuery}"
                                             <button onClick={() => { setSearchQuery(''); setPage(1); }} className="hover:bg-white/50 rounded-full p-0.5 transition-colors">
                                                 <X className="w-4 h-4" />
@@ -190,15 +190,15 @@ export default function BlogPage() {
                     <div className="max-w-7xl mx-auto">
                         {loading ? (
                             <div className="text-center py-20">
-                                <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-purple-500 border-t-transparent"></div>
+                                <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-violet-500 border-t-transparent"></div>
                             </div>
                         ) : blogs.length === 0 ? (
                             <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
-                                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                                <p className="text-xl text-gray-600">No blog posts found</p>
+                                <BookOpen className="w-16 h-16 text-violet-400 mx-auto mb-4" />
+                                <p className="text-xl text-violet-600 font-semibold">No blog posts found</p>
                                 <button
                                     onClick={clearFilters}
-                                    className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                    className="mt-4 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                                 >
                                     Clear Filters
                                 </button>
@@ -229,10 +229,10 @@ export default function BlogPage() {
 
                                                 {/* Content */}
                                                 <div className="p-6 flex-1 flex flex-col">
-                                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text transition-all line-clamp-2">
+                                                    <h3 className="text-xl font-bold text-violet-900 mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-violet-600 group-hover:to-fuchsia-600 group-hover:bg-clip-text transition-all line-clamp-2">
                                                         {blog.title}
                                                     </h3>
-                                                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1 leading-relaxed">
+                                                    <p className="text-violet-600 text-sm mb-4 line-clamp-3 flex-1 leading-relaxed">
                                                         {blog.excerpt}
                                                     </p>
 
@@ -257,7 +257,7 @@ export default function BlogPage() {
                                                     {/* Tech Stack */}
                                                     <div className="flex flex-wrap gap-2 mb-4">
                                                         {blog.techStack.slice(0, 3).map((tech, index) => (
-                                                            <span key={index} className="px-3 py-1 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 text-xs font-medium rounded-lg border border-purple-100">
+                                                            <span key={index} className="px-3 py-1 bg-gradient-to-r from-violet-50 to-fuchsia-50 text-violet-700 text-xs font-medium rounded-lg border border-violet-100">
                                                                 {tech}
                                                             </span>
                                                         ))}
@@ -302,7 +302,7 @@ export default function BlogPage() {
                                                     key={i}
                                                     onClick={() => setPage(i + 1)}
                                                     className={`w-11 h-11 rounded-xl font-semibold transition-all duration-200 ${page === i + 1
-                                                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-110'
+                                                        ? 'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg scale-110'
                                                         : 'border-2 border-gray-300 hover:bg-gray-50 hover:border-gray-400 text-gray-700'
                                                         }`}
                                                 >

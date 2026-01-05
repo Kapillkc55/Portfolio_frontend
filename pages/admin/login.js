@@ -94,14 +94,14 @@ export default function AdminLogin() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-violet-600 via-fuchsia-600 to-blue-600 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
 
             <div className="relative max-w-md w-full">
                 {/* Logo/Header */}
                 <div className="text-center mb-8">
                     <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-2xl">
-                        <span className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">K</span>
+                        <span className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">K</span>
                     </div>
                     <h1 className="text-4xl font-bold text-white mb-2">Admin Portal</h1>
                     <p className="text-white/80">Secure authentication required</p>
@@ -111,15 +111,15 @@ export default function AdminLogin() {
                 <div className="bg-white rounded-3xl shadow-2xl p-8">
                     {/* Step Indicator */}
                     <div className="flex items-center justify-center mb-8">
-                        <div className={`flex items-center ${step >= 1 ? 'text-purple-600' : 'text-gray-300'}`}>
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${step >= 1 ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                        <div className={`flex items-center ${step >= 1 ? 'text-violet-600' : 'text-gray-300'}`}>
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${step >= 1 ? 'bg-violet-600 text-white' : 'bg-gray-200'}`}>
                                 1
                             </div>
                             <span className="ml-2 font-semibold">Login</span>
                         </div>
-                        <div className={`h-1 w-16 mx-4 ${step >= 2 ? 'bg-purple-600' : 'bg-gray-200'}`}></div>
-                        <div className={`flex items-center ${step >= 2 ? 'text-purple-600' : 'text-gray-300'}`}>
-                            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${step >= 2 ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}>
+                        <div className={`h-1 w-16 mx-4 ${step >= 2 ? 'bg-violet-600' : 'bg-gray-200'}`}></div>
+                        <div className={`flex items-center ${step >= 2 ? 'text-violet-600' : 'text-gray-300'}`}>
+                            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${step >= 2 ? 'bg-violet-600 text-white' : 'bg-gray-200'}`}>
                                 2
                             </div>
                             <span className="ml-2 font-semibold">OTP</span>
@@ -147,7 +147,7 @@ export default function AdminLogin() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
                                             placeholder="admin@example.com"
                                         />
                                     </div>
@@ -165,7 +165,7 @@ export default function AdminLogin() {
                                             value={formData.password}
                                             onChange={handleChange}
                                             required
-                                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors"
                                             placeholder="••••••••"
                                         />
                                     </div>
@@ -174,7 +174,7 @@ export default function AdminLogin() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    className="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-violet-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
                                     {loading ? (
                                         <>
@@ -193,13 +193,13 @@ export default function AdminLogin() {
                         <form onSubmit={handleOTPSubmit}>
                             <div className="space-y-6">
                                 <div className="text-center mb-6">
-                                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <Key className="w-8 h-8 text-purple-600" />
+                                    <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <Key className="w-8 h-8 text-violet-600" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">Enter OTP Code</h3>
                                     <p className="text-gray-600 text-sm">
                                         Check your email at<br />
-                                        <span className="font-semibold text-purple-600">kapilraj.developer@gmail.com</span>
+                                        <span className="font-semibold text-violet-600">kapilraj.developer@gmail.com</span>
                                     </p>
                                 </div>
 
@@ -214,7 +214,7 @@ export default function AdminLogin() {
                                         onChange={handleChange}
                                         required
                                         maxLength="6"
-                                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors text-center text-2xl font-bold tracking-widest"
+                                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none transition-colors text-center text-2xl font-bold tracking-widest"
                                         placeholder="000000"
                                     />
                                 </div>
@@ -222,7 +222,7 @@ export default function AdminLogin() {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    className="w-full py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-violet-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
                                     {loading ? (
                                         <>
@@ -239,7 +239,7 @@ export default function AdminLogin() {
                                 <button
                                     type="button"
                                     onClick={() => setStep(1)}
-                                    className="w-full py-3 text-gray-600 hover:text-purple-600 font-semibold transition-colors"
+                                    className="w-full py-3 text-gray-600 hover:text-violet-600 font-semibold transition-colors"
                                 >
                                     ← Back to Login
                                 </button>

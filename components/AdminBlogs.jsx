@@ -249,7 +249,7 @@ export default function AdminBlogs() {
                 </div>
                 <button
                     onClick={() => handleOpenModal()}
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all"
+                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-lg hover:shadow-lg transition-all"
                 >
                     <Plus className="w-5 h-5" />
                     Add Blog Post
@@ -258,7 +258,7 @@ export default function AdminBlogs() {
 
             {loading ? (
                 <div className="text-center py-20">
-                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-purple-500 border-t-transparent"></div>
+                    <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-violet-500 border-t-transparent"></div>
                 </div>
             ) : blogs.length === 0 ? (
                 <div className="text-center py-20 bg-gray-50 rounded-lg">
@@ -266,7 +266,7 @@ export default function AdminBlogs() {
                     <p className="text-xl text-gray-600">No blog posts yet</p>
                     <button
                         onClick={() => handleOpenModal()}
-                        className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                        className="mt-4 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                     >
                         Create Your First Blog Post
                     </button>
@@ -362,7 +362,7 @@ export default function AdminBlogs() {
                                     {/* Tech Stack */}
                                     <div className="flex flex-wrap gap-2 mb-3">
                                         {blog.techStack.slice(0, 5).map((tech, index) => (
-                                            <span key={index} className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">
+                                            <span key={index} className="px-2 py-1 bg-violet-100 text-violet-700 text-xs rounded">
                                                 {tech}
                                             </span>
                                         ))}
@@ -445,7 +445,7 @@ export default function AdminBlogs() {
                                         value={formData.title}
                                         onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                                         required
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                         placeholder="E.g., Building a Real-Time Chat Application"
                                     />
                                 </div>
@@ -459,7 +459,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
                                         required
                                         rows="2"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="Brief description that appears in blog listings..."
                                     ></textarea>
                                 </div>
@@ -478,7 +478,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, problemStatement: e.target.value })}
                                         required
                                         rows="4"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="Describe the problem this project solves..."
                                     ></textarea>
                                 </div>
@@ -493,7 +493,7 @@ export default function AdminBlogs() {
                                                 type="text"
                                                 value={tech}
                                                 onChange={(e) => updateField('techStack', index, e.target.value)}
-                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                                 placeholder="E.g., React, Node.js, MongoDB"
                                             />
                                             {formData.techStack.length > 1 && (
@@ -510,7 +510,7 @@ export default function AdminBlogs() {
                                     <button
                                         type="button"
                                         onClick={() => addField('techStack')}
-                                        className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                                        className="text-violet-600 hover:text-violet-700 text-sm font-medium"
                                     >
                                         + Add Technology
                                     </button>
@@ -525,7 +525,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, architecture: e.target.value })}
                                         required
                                         rows="4"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="Explain the system architecture..."
                                     ></textarea>
                                 </div>
@@ -539,7 +539,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, implementation: e.target.value })}
                                         required
                                         rows="6"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="Technical implementation details, key features, code snippets..."
                                     ></textarea>
                                 </div>
@@ -553,7 +553,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, challenges: e.target.value })}
                                         required
                                         rows="4"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="Problems faced and how you solved them..."
                                     ></textarea>
                                 </div>
@@ -567,7 +567,7 @@ export default function AdminBlogs() {
                                         onChange={(e) => setFormData({ ...formData, learnings: e.target.value })}
                                         required
                                         rows="4"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
                                         placeholder="What did you learn from this project?"
                                     ></textarea>
                                 </div>
@@ -586,7 +586,7 @@ export default function AdminBlogs() {
                                             type="url"
                                             value={formData.githubUrl}
                                             onChange={(e) => setFormData({ ...formData, githubUrl: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                             placeholder="https://github.com/..."
                                         />
                                     </div>
@@ -599,7 +599,7 @@ export default function AdminBlogs() {
                                             type="url"
                                             value={formData.liveUrl}
                                             onChange={(e) => setFormData({ ...formData, liveUrl: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                             placeholder="https://..."
                                         />
                                     </div>
@@ -612,7 +612,7 @@ export default function AdminBlogs() {
                                     <select
                                         value={formData.project}
                                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                     >
                                         <option value="">-- Select Project --</option>
                                         {projects.map((project) => (
@@ -633,7 +633,7 @@ export default function AdminBlogs() {
                                                 type="text"
                                                 value={tag}
                                                 onChange={(e) => updateField('tags', index, e.target.value)}
-                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                                 placeholder="E.g., Web Development, Full Stack"
                                             />
                                             {formData.tags.length > 1 && (
@@ -650,7 +650,7 @@ export default function AdminBlogs() {
                                     <button
                                         type="button"
                                         onClick={() => addField('tags')}
-                                        className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                                        className="text-violet-600 hover:text-violet-700 text-sm font-medium"
                                     >
                                         + Add Tag
                                     </button>
@@ -665,7 +665,7 @@ export default function AdminBlogs() {
                                         min="1"
                                         value={formData.readTime}
                                         onChange={(e) => setFormData({ ...formData, readTime: parseInt(e.target.value) })}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                                     />
                                 </div>
 
@@ -675,7 +675,7 @@ export default function AdminBlogs() {
                                             type="checkbox"
                                             checked={formData.featured}
                                             onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                                            className="w-5 h-5 text-purple-600 rounded focus:ring-purple-500"
+                                            className="w-5 h-5 text-violet-600 rounded focus:ring-violet-500"
                                         />
                                         <span className="text-sm font-medium text-gray-700">Featured Post</span>
                                     </label>
@@ -685,7 +685,7 @@ export default function AdminBlogs() {
                                             type="checkbox"
                                             checked={formData.isPublished}
                                             onChange={(e) => setFormData({ ...formData, isPublished: e.target.checked })}
-                                            className="w-5 h-5 text-purple-600 rounded focus:ring-purple-500"
+                                            className="w-5 h-5 text-violet-600 rounded focus:ring-violet-500"
                                         />
                                         <span className="text-sm font-medium text-gray-700">Publish Immediately</span>
                                     </label>
@@ -703,7 +703,7 @@ export default function AdminBlogs() {
                                 </button>
                                 <button
                                     type="submit"
-                                    className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all"
+                                    className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white rounded-lg hover:shadow-lg transition-all"
                                 >
                                     <Save className="w-5 h-5" />
                                     {editingBlog ? 'Update Blog' : 'Create Blog'}

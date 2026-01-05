@@ -13,8 +13,8 @@ export default function Home() {
             <Navbar />
             <HeroSection />
             <AboutUs />
-            <Experience />
             <Work />
+            <Experience />
             <Contact />
             <Footer />
             <WhatsAppWidget />

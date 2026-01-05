@@ -217,7 +217,7 @@ export default function AdminContacts() {
     if (loading) {
         return (
             <div className="flex items-center justify-center p-12">
-                <Loader2 className="w-8 h-8 animate-spin text-purple-600" />
+                <Loader2 className="w-8 h-8 animate-spin text-violet-600" />
             </div>
         );
     }
@@ -254,7 +254,7 @@ export default function AdminContacts() {
                         key={status}
                         onClick={() => setFilterStatus(status)}
                         className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${filterStatus === status
-                            ? 'bg-purple-600 text-white'
+                            ? 'bg-violet-600 text-white'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                     >
@@ -389,12 +389,12 @@ export default function AdminContacts() {
                                     onChange={(e) => setReplyMessage(e.target.value)}
                                     rows="4"
                                     placeholder="Type your reply message..."
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none resize-none"
+                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-violet-500 focus:outline-none resize-none"
                                 ></textarea>
                                 <button
                                     type="submit"
                                     disabled={replyLoading || !replyMessage.trim()}
-                                    className="mt-2 w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                    className="mt-2 w-full py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
                                     {replyLoading ? (
                                         <>

@@ -20,18 +20,18 @@ const AdminExperience = () => {
         description: '',
         achievements: [''],
         technologies: [''],
-        gradient: 'from-purple-500 to-pink-500',
+        gradient: 'from-violet-500 to-fuchsia-500',
         icon: '💼'
     });
 
     const typeOptions = ['Full-time', 'Part-time', 'Internship', 'Contract', 'Freelance'];
     const gradientOptions = [
-        { value: 'from-purple-500 to-pink-500', label: 'Purple to Pink' },
+        { value: 'from-violet-500 to-fuchsia-500', label: 'Purple to Pink' },
         { value: 'from-blue-500 to-cyan-500', label: 'Blue to Cyan' },
         { value: 'from-green-500 to-emerald-500', label: 'Green to Emerald' },
         { value: 'from-orange-500 to-red-500', label: 'Orange to Red' },
-        { value: 'from-indigo-500 to-purple-500', label: 'Indigo to Purple' },
-        { value: 'from-pink-500 to-rose-500', label: 'Pink to Rose' }
+        { value: 'from-indigo-500 to-violet-500', label: 'Indigo to Purple' },
+        { value: 'from-fuchsia-500 to-rose-500', label: 'Pink to Rose' }
     ];
 
     const iconOptions = ['💼', '💻', '🎓', '⚡', '🏆', '📱', '🎨', '🔧', '📊'];
@@ -87,7 +87,7 @@ const AdminExperience = () => {
                 description: '',
                 achievements: [''],
                 technologies: [''],
-                gradient: 'from-purple-500 to-pink-500',
+                gradient: 'from-violet-500 to-fuchsia-500',
                 icon: '💼'
             });
         }
@@ -215,7 +215,7 @@ const AdminExperience = () => {
         return (
             <div className="flex items-center justify-center min-h-screen">
                 <div className="text-center">
-                    <Briefcase className="w-12 h-12 text-purple-600 mx-auto mb-4 animate-pulse" />
+                    <Briefcase className="w-12 h-12 text-violet-600 mx-auto mb-4 animate-pulse" />
                     <p className="text-gray-600">Loading experiences...</p>
                 </div>
             </div>
@@ -230,14 +230,14 @@ const AdminExperience = () => {
                     <div className="flex justify-between items-center">
                         <div>
                             <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-                                <Briefcase className="w-7 h-7 text-purple-600" />
+                                <Briefcase className="w-7 h-7 text-violet-600" />
                                 Experience Management
                             </h1>
                             <p className="text-gray-600 mt-1">Manage your work experience and internships</p>
                         </div>
                         <button
                             onClick={() => handleOpenModal()}
-                            className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+                            className="flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors"
                         >
                             <Plus className="w-5 h-5" />
                             Add Experience
@@ -253,7 +253,7 @@ const AdminExperience = () => {
                             <p className="text-gray-600 mb-4">No experiences added yet</p>
                             <button
                                 onClick={() => handleOpenModal()}
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
+                                className="inline-flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                             >
                                 <Plus className="w-4 h-4" />
                                 Add Your First Experience
@@ -272,7 +272,7 @@ const AdminExperience = () => {
                                                 <h3 className="text-2xl font-bold text-gray-800">{exp.role}</h3>
                                                 <span className={`px-3 py-1 text-xs font-semibold rounded-full ${exp.type === 'Internship'
                                                     ? 'bg-green-100 text-green-700'
-                                                    : 'bg-purple-100 text-purple-700'
+                                                    : 'bg-violet-100 text-violet-700'
                                                     }`}>
                                                     {exp.type}
                                                 </span>
@@ -281,11 +281,11 @@ const AdminExperience = () => {
 
                                             <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
                                                 <div className="flex items-center gap-1">
-                                                    <Calendar className="w-4 h-4 text-purple-500" />
+                                                    <Calendar className="w-4 h-4 text-violet-500" />
                                                     {exp.period}
                                                 </div>
                                                 <div className="flex items-center gap-1">
-                                                    <MapPin className="w-4 h-4 text-purple-500" />
+                                                    <MapPin className="w-4 h-4 text-violet-500" />
                                                     {exp.location}
                                                 </div>
                                             </div>
@@ -294,7 +294,7 @@ const AdminExperience = () => {
 
                                             <div className="mb-4">
                                                 <h4 className="font-semibold text-gray-800 flex items-center gap-2 mb-2">
-                                                    <Award className="w-4 h-4 text-purple-500" />
+                                                    <Award className="w-4 h-4 text-violet-500" />
                                                     Achievements ({exp.achievements.length})
                                                 </h4>
                                                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
@@ -302,7 +302,7 @@ const AdminExperience = () => {
                                                         <li key={idx}>{achievement}</li>
                                                     ))}
                                                     {exp.achievements.length > 2 && (
-                                                        <li className="text-purple-600">+ {exp.achievements.length - 2} more</li>
+                                                        <li className="text-violet-600">+ {exp.achievements.length - 2} more</li>
                                                     )}
                                                 </ul>
                                             </div>
@@ -364,7 +364,7 @@ const AdminExperience = () => {
                                             type="text"
                                             value={formData.role}
                                             onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="Senior Full Stack Developer"
                                             required
                                         />
@@ -378,7 +378,7 @@ const AdminExperience = () => {
                                             type="text"
                                             value={formData.company}
                                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="Tech Innovations Inc."
                                             required
                                         />
@@ -391,7 +391,7 @@ const AdminExperience = () => {
                                         <select
                                             value={formData.type}
                                             onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         >
                                             {typeOptions.map(type => (
                                                 <option key={type} value={type}>{type}</option>
@@ -407,7 +407,7 @@ const AdminExperience = () => {
                                             type="text"
                                             value={formData.location}
                                             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="Kathmandu, Nepal"
                                             required
                                         />
@@ -421,7 +421,7 @@ const AdminExperience = () => {
                                             type="text"
                                             value={formData.period}
                                             onChange={(e) => setFormData({ ...formData, period: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="Jan 2024 - Present"
                                             required
                                         />
@@ -435,7 +435,7 @@ const AdminExperience = () => {
                                             type="text"
                                             value={formData.duration}
                                             onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                             placeholder="1 year"
                                             required
                                         />
@@ -451,7 +451,7 @@ const AdminExperience = () => {
                                         value={formData.description}
                                         onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                                         rows="3"
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         placeholder="Brief description of your role and responsibilities"
                                         required
                                     />
@@ -468,7 +468,7 @@ const AdminExperience = () => {
                                                 type="text"
                                                 value={achievement}
                                                 onChange={(e) => updateArrayField('achievements', index, e.target.value)}
-                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                                 placeholder="Key achievement or milestone"
                                             />
                                             {formData.achievements.length > 1 && (
@@ -485,7 +485,7 @@ const AdminExperience = () => {
                                     <button
                                         type="button"
                                         onClick={() => addArrayField('achievements')}
-                                        className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+                                        className="text-sm text-violet-600 hover:text-violet-700 font-medium"
                                     >
                                         + Add Achievement
                                     </button>
@@ -502,7 +502,7 @@ const AdminExperience = () => {
                                                 type="text"
                                                 value={tech}
                                                 onChange={(e) => updateArrayField('technologies', index, e.target.value)}
-                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                                 placeholder="React, Node.js, etc."
                                             />
                                             {formData.technologies.length > 1 && (
@@ -519,7 +519,7 @@ const AdminExperience = () => {
                                     <button
                                         type="button"
                                         onClick={() => addArrayField('technologies')}
-                                        className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+                                        className="text-sm text-violet-600 hover:text-violet-700 font-medium"
                                     >
                                         + Add Technology
                                     </button>
@@ -534,7 +534,7 @@ const AdminExperience = () => {
                                         <select
                                             value={formData.gradient}
                                             onChange={(e) => setFormData({ ...formData, gradient: e.target.value })}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500"
                                         >
                                             {gradientOptions.map(opt => (
                                                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -554,8 +554,8 @@ const AdminExperience = () => {
                                                     type="button"
                                                     onClick={() => setFormData({ ...formData, icon })}
                                                     className={`p-3 text-2xl rounded-lg border-2 transition-all ${formData.icon === icon
-                                                        ? 'border-purple-500 bg-purple-50'
-                                                        : 'border-gray-200 hover:border-purple-300'
+                                                        ? 'border-violet-500 bg-violet-50'
+                                                        : 'border-gray-200 hover:border-violet-300'
                                                         }`}
                                                 >
                                                     {icon}
@@ -577,7 +577,7 @@ const AdminExperience = () => {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 disabled:bg-purple-400 transition-colors"
+                                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:bg-violet-400 transition-colors"
                                     >
                                         <Save className="w-5 h-5" />
                                         {loading ? 'Saving...' : editingExp ? 'Update Experience' : 'Add Experience'}
