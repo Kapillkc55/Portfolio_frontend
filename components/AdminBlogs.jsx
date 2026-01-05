@@ -36,7 +36,7 @@ export default function AdminBlogs() {
     const fetchBlogs = async () => {
         setLoading(true);
         try {
-            const token = localStorage.getItem('token');
+            const token = localStorage.getItem('adminToken');
             const response = await fetch('http://localhost:5000/api/blogs/admin/all', {
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -124,7 +124,7 @@ export default function AdminBlogs() {
         }
 
         try {
-            const token = localStorage.getItem('token');
+            const token = localStorage.getItem('adminToken');
             const url = editingBlog
                 ? `http://localhost:5000/api/blogs/${editingBlog._id}`
                 : 'http://localhost:5000/api/blogs';
@@ -165,7 +165,7 @@ export default function AdminBlogs() {
         formData.append('image', file);
 
         try {
-            const token = localStorage.getItem('token');
+            const token = localStorage.getItem('adminToken');
             const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/upload-cover`, {
                 method: 'POST',
                 headers: {
@@ -194,7 +194,7 @@ export default function AdminBlogs() {
         if (!confirm('Are you sure you want to delete this blog?')) return;
 
         try {
-            const token = localStorage.getItem('token');
+            const token = localStorage.getItem('adminToken');
             const response = await fetch(`http://localhost:5000/api/blogs/${id}`, {
                 method: 'DELETE',
                 headers: {

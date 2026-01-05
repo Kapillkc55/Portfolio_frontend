@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, MapPin, Send, Loader2 } from "lucide-react";
 
 export default function Contact() {
     const [contactInfo, setContactInfo] = useState({
@@ -61,12 +61,9 @@ export default function Contact() {
                 {/* Contact Content */}
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* Contact Information - Left Side */}
-                    <div className="space-y-8">
-                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-slate-200">
-                            <h3 className="text-3xl font-bold text-slate-900 mb-6">Let's Talk</h3>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-                            </p>
+                    <div className="space-y-6">
+                        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-2 border-slate-200 h-full">
+                            <h3 className="text-3xl font-bold text-slate-900 mb-8">Let's build something great.</h3>
 
                             {/* Contact Details */}
                             <div className="space-y-6">
@@ -94,24 +91,6 @@ export default function Contact() {
                                             </div>
                                         </div>
 
-                                        {/* Phone */}
-                                        <div className="group">
-                                            <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                                                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                                    <Phone className="w-6 h-6 text-white" />
-                                                </div>
-                                                <div>
-                                                    <p className="text-sm font-semibold text-blue-600 mb-1">Phone</p>
-                                                    <a
-                                                        href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                                                        className="text-slate-900 font-medium hover:text-blue-600 transition-colors duration-300"
-                                                    >
-                                                        {contactInfo.phone}
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                         {/* Location */}
                                         <div className="group">
                                             <div className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 hover:shadow-lg transition-all duration-300 cursor-pointer">
@@ -132,8 +111,8 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    
-                    <div>
+                    {/* Contact Form - Right Side */}
+                    <div className="lg:sticky lg:top-8">
                         <ContactForm />
                     </div>
                 </div>

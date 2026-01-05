@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, User, MessageSquare, Send, CheckCircle, Loader2 } from 'lucide-react';
+import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactForm() {
@@ -97,16 +97,16 @@ export default function ContactForm() {
 
     if (success) {
         return (
-            <div className="max-w-4xl mx-auto px-6 py-12">
-                <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-3xl p-12 text-center border-2 border-green-200">
-                    <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="w-12 h-12 text-white" />
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-slate-200">
+                <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 text-center border-2 border-green-200">
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle className="w-10 h-10 text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">Message Sent Successfully! 🎉</h2>
-                    <p className="text-gray-600 mb-6">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-3">Message Sent Successfully! 🎉</h2>
+                    <p className="text-gray-600 mb-4 text-sm">
                         Thank you for reaching out! I've received your message and will get back to you as soon as possible.
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs text-gray-500">
                         Check your email for a confirmation message.
                     </p>
                 </div>
@@ -115,19 +115,12 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border-2 border-slate-200">
             <Toaster />
-            <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-2">Let's Connect</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                    Drop me a message and I'll get back to you soon
-                </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="bg-white rounded-3xl shadow-xl p-8 border border-gray-200">
+            <form onSubmit={handleSubmit} className="p-8">
                 {error && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm flex items-center gap-2">
-                        <span>❌</span>
+                        <span>⚠️</span>
                         {error}
                     </div>
                 )}
@@ -135,65 +128,58 @@ export default function ContactForm() {
                 {/* Name Field */}
                 <div className="mb-6">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Your Name <span className="text-red-500">*</span>
+                        Name
                     </label>
-                    <div className="relative">
-                        <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            placeholder="John Doe"
-                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
-                        />
-                    </div>
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        minLength={2}
+                        placeholder="John Doe"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                    />
                 </div>
 
                 {/* Email Field */}
                 <div className="mb-6">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Email Address <span className="text-red-500">*</span>
+                        Email
                     </label>
-                    <div className="relative">
-                        <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            placeholder="john@example.com"
-                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
-                        />
-                    </div>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        placeholder="john@example.com"
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors"
+                    />
                 </div>
 
                 {/* Message Field */}
                 <div className="mb-6">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Your Message <span className="text-red-500">*</span>
+                        Message
                     </label>
-                    <div className="relative">
-                        <MessageSquare className="absolute left-4 top-6 w-5 h-5 text-gray-400" />
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                            rows="6"
-                            placeholder="Tell me about your project..."
-                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors resize-none"
-                        ></textarea>
-                    </div>
+                    <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        minLength={10}
+                        rows="6"
+                        placeholder="Tell me about your project..."
+                        className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition-colors resize-none"
+                    ></textarea>
                 </div>
 
                 {/* Submit Button */}
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {loading ? (
                         <>
@@ -207,10 +193,6 @@ export default function ContactForm() {
                         </>
                     )}
                 </button>
-
-                <p className="text-center text-sm text-gray-500 mt-6">
-                    🔒 Your information is secure and will never be shared with third parties.
-                </p>
             </form>
         </div>
     );

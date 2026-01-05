@@ -184,11 +184,11 @@ const AdminStats = () => {
                             />
                         </div>
 
-                        {/* Ongoing Projects */}
+                        {/* Years Experience */}
                         <div>
                             <label className="flex text-sm font-medium text-gray-700 mb-2 items-center gap-2">
                                 <TrendingUp className="w-4 h-4 text-orange-600" />
-                                Ongoing Projects
+                                Years Experience
                             </label>
                             <input
                                 type="number"
@@ -274,7 +274,7 @@ const AdminStats = () => {
                         </div>
                         <div className="text-center">
                             <p className="text-3xl font-bold">{stats.ongoingProjects}</p>
-                            <p className="text-sm mt-1 opacity-90">Ongoing Projects</p>
+                            <p className="text-sm mt-1 opacity-90">Years Experience</p>
                         </div>
                         <div className="text-center">
                             <p className="text-3xl font-bold">{stats.happyClients}+</p>

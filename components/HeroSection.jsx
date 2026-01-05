@@ -15,7 +15,8 @@ export default function HeroSection() {
         name: '',
         email: '',
         message: '',
-        meetingTime: ''
+        meetingTime: '',
+        meetingType: 'online'
     });
 
     // Fetch project statistics
@@ -70,7 +71,7 @@ export default function HeroSection() {
                     duration: 5000,
                     position: 'top-center',
                 });
-                setFormData({ name: '', email: '', message: '', meetingTime: '' });
+                setFormData({ name: '', email: '', message: '', meetingTime: '', meetingType: 'online' });
                 // Auto close form after successful submission
                 setTimeout(() => {
                     setShowForm(false);
@@ -113,12 +114,12 @@ export default function HeroSection() {
                         <h1 className="hero-title">
                             Hi, I'm <span className="highlight">Kapil Raj KC</span>
                         </h1>
-                        <h2 className="hero-subtitle">Full Stack Developer</h2>
+                        <h2 className="hero-subtitle">Full Stack Developer & UI/UX Enthusiast</h2>
 
                         <p className="hero-description">
-                            I'm a passionate developer from Kathmandu, Nepal.
-                            I specialize in building fast, responsive, and modern full-stack web applications
-                            using cutting-edge technologies.
+                            I'm a passionate developer from Kathmandu, Nepal, specializing in building modern web applications.
+                            Expert in Frontend Development, Backend Architecture, and Admin Panel Design
+                            using cutting-edge technologies like React, Node.js, and MongoDB.
                         </p>
 
                         {/* Project Stats */}
@@ -129,7 +130,7 @@ export default function HeroSection() {
                             </div>
                             <div className="stat-card">
                                 <div className="stat-number">{stats.ongoingProjects}</div>
-                                <div className="stat-label">Ongoing Projects</div>
+                                <div className="stat-label">Years Experience</div>
                             </div>
                             <div className="stat-card">
                                 <div className="stat-number">{stats.happyClients}+</div>
@@ -166,8 +167,9 @@ export default function HeroSection() {
                             </div>
                             <h3 className="meeting-title">Schedule a Meeting</h3>
                             <p className="meeting-description">
-                                Let's discuss your project ideas and how we can work together to bring them to life.
+                                Book a convenient time to discuss your project. Available for both online meetings and in-person consultations in Kathmandu.
                             </p>
+
                             <button
                                 onClick={() => setShowForm(true)}
                                 className="meeting-btn"
@@ -226,7 +228,7 @@ export default function HeroSection() {
                                 <div className="form-group">
                                     <label className="form-label">
                                         <Calendar className="label-icon" />
-                                        Preferred Meeting Time <span style={{ color: 'red' }}>*</span>
+                                        Preferred Meeting Date & Time <span style={{ color: 'red' }}>*</span>
                                     </label>
                                     <input
                                         type="datetime-local"
@@ -234,8 +236,40 @@ export default function HeroSection() {
                                         value={formData.meetingTime}
                                         onChange={handleChange}
                                         className="form-input"
+                                        min={new Date().toISOString().slice(0, 16)}
                                         required
                                     />
+
+                                </div>
+
+                                <div className="form-group">
+                                    <label className="form-label">
+                                        Meeting Type <span style={{ color: 'red' }}>*</span>
+                                    </label>
+                                    <div style={{ display: 'flex', gap: '1rem', marginTop: '0.5rem' }}>
+                                        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                                            <input
+                                                type="radio"
+                                                name="meetingType"
+                                                value="online"
+                                                checked={formData.meetingType === 'online'}
+                                                onChange={handleChange}
+                                                style={{ cursor: 'pointer' }}
+                                            />
+                                            <span> Online (Zoom/Meet)</span>
+                                        </label>
+                                        <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
+                                            <input
+                                                type="radio"
+                                                name="meetingType"
+                                                value="in-person"
+                                                checked={formData.meetingType === 'in-person'}
+                                                onChange={handleChange}
+                                                style={{ cursor: 'pointer' }}
+                                            />
+                                            <span> In-Person (Kathmandu)</span>
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div className="form-group">

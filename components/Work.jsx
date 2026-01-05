@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Code2, ArrowRight } from "lucide-react";
+import { Github, ExternalLink, Code2 } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Work() {
@@ -135,14 +135,6 @@ export default function Work() {
                                                 {tech}
                                             </span>
                                         ))}
-                                    </div>
-
-                                    {/* CTA Button */}
-                                    <div className="pt-4">
-                                        <button className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
-                                            View Project
-                                            <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                                        </button>
                                     </div>
                                 </div>
                             </div>

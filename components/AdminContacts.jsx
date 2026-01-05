@@ -287,10 +287,12 @@ export default function AdminContacts() {
                                         <p className="text-sm text-gray-600 mb-2">{contact.email}</p>
                                         <p className="text-sm text-gray-500 line-clamp-2">{contact.message}</p>
                                         <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
-                                            <span className="flex items-center gap-1">
-                                                <Calendar className="w-3 h-3" />
-                                                {new Date(contact.meetingTime).toLocaleDateString()}
-                                            </span>
+                                            {contact.meetingTime && (
+                                                <span className="flex items-center gap-1">
+                                                    <Calendar className="w-3 h-3" />
+                                                    Meeting: {new Date(contact.meetingTime).toLocaleDateString()}
+                                                </span>
+                                            )}
                                             <span>
                                                 Received: {new Date(contact.createdAt).toLocaleDateString()}
                                             </span>
@@ -329,22 +331,30 @@ export default function AdminContacts() {
                             </div>
 
                             {/* Meeting Time */}
-                            <div className="mb-4 p-4 bg-blue-50 rounded-lg">
-                                <div className="flex items-center gap-2 text-blue-700 font-semibold mb-1">
-                                    <Calendar className="w-4 h-4" />
-                                    Preferred Meeting Time
+                            {selectedContact.meetingTime && (
+                                <div className="mb-4 p-4 bg-blue-50 rounded-lg">
+                                    <div className="flex items-center gap-2 text-blue-700 font-semibold mb-1">
+                                        <Calendar className="w-4 h-4" />
+                                        Preferred Meeting Time
+                                    </div>
+                                    <p className="text-blue-900">
+                                        {new Date(selectedContact.meetingTime).toLocaleString('en-US', {
+                                            weekday: 'long',
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric',
+                                            hour: '2-digit',
+                                            minute: '2-digit',
+                                            timeZone: 'Asia/Kathmandu'
+                                        })} (Nepal Time)
+                                    </p>
+                                    {selectedContact.meetingType && (
+                                        <p className="text-blue-800 mt-2 font-medium">
+                                            {selectedContact.meetingType === 'online' ? '🌐 Online Meeting (Zoom/Meet)' : '🤝 In-Person Meeting (Kathmandu)'}
+                                        </p>
+                                    )}
                                 </div>
-                                <p className="text-blue-900">
-                                    {new Date(selectedContact.meetingTime).toLocaleString('en-US', {
-                                        weekday: 'long',
-                                        year: 'numeric',
-                                        month: 'long',
-                                        day: 'numeric',
-                                        hour: '2-digit',
-                                        minute: '2-digit'
-                                    })}
-                                </p>
-                            </div>
+                            )}
 
                             {/* Message */}
                             <div className="mb-4 p-4 bg-gray-50 rounded-lg">
