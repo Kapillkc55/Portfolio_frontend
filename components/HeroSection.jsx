@@ -6,10 +6,7 @@ export default function HeroSection() {
     const [showForm, setShowForm] = useState(false);
     const [loading, setLoading] = useState(false);
     const [stats, setStats] = useState({
-        completedProjects: 15,
-        ongoingProjects: 3,
-        happyClients: 20,
-        yearsExperience: 0
+        
     });
     const [formData, setFormData] = useState({
         name: '',
@@ -114,12 +111,12 @@ export default function HeroSection() {
                         <h1 className="hero-title">
                             Hi, I'm <span className="highlight">Kapil Raj KC</span>
                         </h1>
-                        <h2 className="hero-subtitle">Full Stack Developer & UI/UX Enthusiast</h2>
+                        <h2 className="hero-subtitle">Full Stack Developer </h2>
 
                         <p className="hero-description">
-                            I'm a passionate developer from Kathmandu, Nepal, specializing in building modern web applications.
-                            Expert in Frontend Development, Backend Architecture, and Admin Panel Design
-                            using cutting-edge technologies like React, Node.js, and MongoDB.
+                            Full-Stack Developer 
+                            <br/>
+Experienced in React, Next.js, TypeScript, Node.js, and Spring Boot, delivering modern, secure, and efficient web solutions with clean architecture and user-focused design.
                         </p>
 
                         {/* Project Stats */}
