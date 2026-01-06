@@ -23,7 +23,7 @@ export default function HeroSection() {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/project-stats/');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/project-stats/`);
                 const data = await response.json();
 
                 if (data.success && data.stats) {
