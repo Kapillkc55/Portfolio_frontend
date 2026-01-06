@@ -37,7 +37,7 @@ export default function AdminBlogs() {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/blogs/admin/all', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/admin/all`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -57,7 +57,7 @@ export default function AdminBlogs() {
 
     const fetchProjects = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/projects');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
             const data = await response.json();
 
             if (data.success) {
@@ -126,8 +126,8 @@ export default function AdminBlogs() {
         try {
             const token = localStorage.getItem('adminToken');
             const url = editingBlog
-                ? `http://localhost:5000/api/blogs/${editingBlog._id}`
-                : 'http://localhost:5000/api/blogs';
+                ? `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${editingBlog._id}`
+                : `${process.env.NEXT_PUBLIC_API_URL}/api/blogs`;
 
             const response = await fetch(url, {
                 method: editingBlog ? 'PUT' : 'POST',
@@ -166,7 +166,7 @@ export default function AdminBlogs() {
 
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/upload-cover`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${blogId}/upload-cover`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -195,7 +195,7 @@ export default function AdminBlogs() {
 
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

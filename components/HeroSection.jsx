@@ -44,10 +44,10 @@ export default function HeroSection() {
     }, []);
 
     const socialLinks = [
-        { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/kapilrajkc", color: "#0077B5" },
-        { name: "GitHub", icon: Github, url: "https://github.com/kapilrajkc", color: "#333333" },
+        { name: "LinkedIn", icon: Linkedin, url: "https://linkedin.com/in/kapilra-kc", color: "#0077B5" },
+        { name: "GitHub", icon: Github, url: "https://github.com/kapilraj10", color: "#333333" },
         { name: "Instagram", icon: Instagram, url: "https://instagram.com/kapilrajkc", color: "#E4405F" },
-        { name: "Facebook", icon: Facebook, url: "https://facebook.com/kapilrajkc", color: "#1877F2" },
+        { name: "Facebook", icon: Facebook, url: "https://facebook.com/kapil.rajkc1", color: "#1877F2" },
         { name: "Twitter", icon: Twitter, url: "https://twitter.com/kapilrajkc", color: "#1DA1F2" }
     ];
 
@@ -56,7 +56,7 @@ export default function HeroSection() {
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:5000/api/contacts/submit', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

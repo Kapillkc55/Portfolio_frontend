@@ -9,7 +9,7 @@ export default function AboutUs() {
     useEffect(() => {
         const fetchAboutData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/about/');
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/`);
                 const data = await response.json();
 
                 if (data.success && data.about) {

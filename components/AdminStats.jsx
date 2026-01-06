@@ -18,7 +18,7 @@ const AdminStats = () => {
     // Fetch current stats
     const fetchStats = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/project-stats/', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/project-stats/`, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -65,7 +65,7 @@ const AdminStats = () => {
         try {
             const token = localStorage.getItem('adminToken');
 
-            const response = await fetch('http://localhost:5000/api/project-stats/update', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/project-stats/update`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const AdminStats = () => {
         try {
             const token = localStorage.getItem('adminToken');
 
-            const response = await fetch('http://localhost:5000/api/project-stats/reset', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/project-stats/reset`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const AdminStats = () => {
         try {
             const token = localStorage.getItem('adminToken');
 
-            const response = await fetch('http://localhost:5000/api/project-stats/history?page=1&limit=10', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/project-stats/history?page=1&limit=10`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

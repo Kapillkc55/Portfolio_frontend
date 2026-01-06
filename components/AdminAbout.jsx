@@ -43,7 +43,7 @@ const AdminAbout = () => {
     const fetchAbout = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:5000/api/about/');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/`);
             const data = await response.json();
 
             if (data.success) {
@@ -68,7 +68,7 @@ const AdminAbout = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/about/update', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/update`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -132,7 +132,7 @@ const AdminAbout = () => {
             const formData = new FormData();
             formData.append('image', selectedFile);
 
-            const response = await fetch('http://localhost:5000/api/about/upload-image', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/upload-image`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -168,7 +168,7 @@ const AdminAbout = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/about/expertise', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/expertise`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -202,7 +202,7 @@ const AdminAbout = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/about/expertise/${expertiseId}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/expertise/${expertiseId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -235,7 +235,7 @@ const AdminAbout = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/about/technology', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/technology`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -284,7 +284,7 @@ const AdminAbout = () => {
             const formData = new FormData();
             formData.append('icon', file);
 
-            const response = await fetch(`http://localhost:5000/api/about/technology/${techId}/upload-icon`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/technology/${techId}/upload-icon`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -315,7 +315,7 @@ const AdminAbout = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/about/technology/${techId}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about/technology/${techId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

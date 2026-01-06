@@ -26,7 +26,7 @@ export default function ContactForm() {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:5000/api/contacts/submit', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/submit`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -120,7 +120,7 @@ export default function ContactForm() {
             <form onSubmit={handleSubmit} className="p-8">
                 {error && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-600 text-sm flex items-center gap-2">
-                        <span>⚠️</span>
+                        <span></span>
                         {error}
                     </div>
                 )}

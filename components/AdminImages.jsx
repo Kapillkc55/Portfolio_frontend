@@ -51,7 +51,7 @@ const AdminImages = () => {
                 if (filters[key]) queryParams.append(key, filters[key]);
             });
 
-            const response = await fetch(`http://localhost:5000/api/images?${queryParams}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images?${queryParams}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -76,7 +76,7 @@ const AdminImages = () => {
     const fetchStats = async () => {
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/images/stats', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images/stats`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -131,7 +131,7 @@ const AdminImages = () => {
 
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/images/upload', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images/upload`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -165,7 +165,7 @@ const AdminImages = () => {
 
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/images/${selectedImage._id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images/${selectedImage._id}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -207,7 +207,7 @@ const AdminImages = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/images/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -243,7 +243,7 @@ const AdminImages = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/images/bulk-delete', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/images/bulk-delete`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -1,0 +1,29 @@
+{
+    "name": "Kapilraj KC - Full-Stack Developer Portfolio",
+    "short_name": "Kapilraj KC",
+    "description": "Full-Stack Developer with 2+ years of experience specializing in React, Next.js, Node.js, TypeScript, and DevOps",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#7c3aed",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/kapil.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "https://www.kapilrajkc.com.np/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": [
+        "portfolio",
+        "technology",
+        "development"
+    ],
+    "lang": "en-US",
+    "dir": "ltr"
+}

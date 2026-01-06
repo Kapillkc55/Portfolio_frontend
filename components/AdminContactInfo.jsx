@@ -18,7 +18,7 @@ export default function AdminContactInfo() {
     const fetchContactInfo = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:5000/api/contact-info');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact-info`);
             const data = await response.json();
 
             if (data.success) {
@@ -42,7 +42,7 @@ export default function AdminContactInfo() {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5000/api/contact-info', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact-info`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

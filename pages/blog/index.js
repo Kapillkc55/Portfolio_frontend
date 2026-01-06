@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { BookOpen, Clock, Eye, Calendar, Tag, Search, X, Star } from 'lucide-react';
 import Head from 'next/head';
 
@@ -31,7 +29,7 @@ export default function BlogPage() {
             params.append('page', page);
             params.append('limit', 12);
 
-            const response = await fetch(`http://localhost:5000/api/blogs?${params}`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?${params}`);
             const data = await response.json();
 
             if (data.success) {
@@ -70,8 +68,6 @@ export default function BlogPage() {
             </Head>
 
             <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
-                <Navbar />
-
                 {/* Hero Section */}
                 <section className="pt-32 pb-16 px-4">
                     <div className="max-w-7xl mx-auto text-center">
@@ -324,8 +320,6 @@ export default function BlogPage() {
                         )}
                     </div>
                 </section>
-
-                <Footer />
             </div>
 
             <style jsx>{`

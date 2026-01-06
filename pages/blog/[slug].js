@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import { ArrowLeft, Clock, Eye, Calendar, Tag, Github, ExternalLink, User, Lightbulb, AlertTriangle, Code, Layout, Wrench } from 'lucide-react';
 import Head from 'next/head';
 
@@ -21,7 +19,7 @@ export default function BlogDetailPage() {
     const fetchBlog = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:5000/api/blogs/${slug}`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${slug}`);
             const data = await response.json();
 
             if (data.success) {
@@ -57,8 +55,6 @@ export default function BlogDetailPage() {
             </Head>
 
             <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-fuchsia-50">
-                <Navbar />
-
                 {/* Hero Section with Cover Image */}
                 <section className="pt-24 relative">
                     <div className="relative h-[60vh] overflow-hidden">
@@ -296,8 +292,6 @@ export default function BlogDetailPage() {
                         </div>
                     </div>
                 </section>
-
-                <Footer />
             </div>
         </>
     );

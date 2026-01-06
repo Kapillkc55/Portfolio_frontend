@@ -43,7 +43,7 @@ const AdminExperience = () => {
     const fetchExperiences = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:5000/api/experiences');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experiences`);
             const data = await response.json();
 
             if (data.success) {
@@ -129,8 +129,8 @@ const AdminExperience = () => {
         try {
             const token = localStorage.getItem('adminToken');
             const url = editingExp
-                ? `http://localhost:5000/api/experiences/${editingExp._id}`
-                : 'http://localhost:5000/api/experiences';
+                ? `${process.env.NEXT_PUBLIC_API_URL}/api/experiences/${editingExp._id}`
+                : `${process.env.NEXT_PUBLIC_API_URL}/api/experiences`;
 
             const response = await fetch(url, {
                 method: editingExp ? 'PUT' : 'POST',
@@ -164,7 +164,7 @@ const AdminExperience = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/experiences/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experiences/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -33,8 +33,8 @@ export default function AdminContacts() {
         try {
             const token = localStorage.getItem('adminToken');
             const url = filterStatus === 'all'
-                ? 'http://localhost:5000/api/contacts'
-                : `http://localhost:5000/api/contacts?status=${filterStatus}`;
+                ? `${process.env.NEXT_PUBLIC_API_URL}/api/contacts`
+                : `${process.env.NEXT_PUBLIC_API_URL}/api/contacts?status=${filterStatus}`;
 
             const response = await fetch(url, {
                 headers: {
@@ -56,7 +56,7 @@ export default function AdminContacts() {
     const fetchStats = async () => {
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:5000/api/contacts/stats', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/stats`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -77,7 +77,7 @@ export default function AdminContacts() {
         // Mark as read if pending
         if (contact.status === 'pending') {
             const token = localStorage.getItem('adminToken');
-            await fetch(`http://localhost:5000/api/contacts/${contact._id}`, {
+            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/${contact._id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -94,7 +94,7 @@ export default function AdminContacts() {
         setReplyLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/contacts/${selectedContact._id}/reply`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/${selectedContact._id}/reply`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export default function AdminContacts() {
             });
 
             if (response.ok) {
-                toast.success('✅ Reply sent successfully to user!', {
+                toast.success('Reply sent successfully to user!', {
                     duration: 3000,
                     position: 'top-center',
                 });
@@ -113,13 +113,13 @@ export default function AdminContacts() {
                 fetchContacts();
                 fetchStats();
             } else {
-                toast.error('❌ Failed to send reply. Please try again.', {
+                toast.error(' Failed to send reply. Please try again.', {
                     duration: 3000,
                     position: 'top-center',
                 });
             }
         } catch (error) {
-            toast.error('❌ Network error. Failed to send reply.', {
+            toast.error(' Network error. Failed to send reply.', {
                 duration: 3000,
                 position: 'top-center',
             });
@@ -133,7 +133,7 @@ export default function AdminContacts() {
 
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/contacts/${contactId}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/${contactId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -141,7 +141,7 @@ export default function AdminContacts() {
             });
 
             if (response.ok) {
-                toast.success('🗑️ Contact deleted successfully!', {
+                toast.success(' Contact deleted successfully!', {
                     duration: 3000,
                     position: 'top-center',
                 });
@@ -149,13 +149,13 @@ export default function AdminContacts() {
                 fetchStats();
                 setSelectedContact(null);
             } else {
-                toast.error('❌ Failed to delete contact.', {
+                toast.error(' Failed to delete contact.', {
                     duration: 3000,
                     position: 'top-center',
                 });
             }
         } catch (error) {
-            toast.error('❌ Network error. Failed to delete contact.', {
+            toast.error(' Network error. Failed to delete contact.', {
                 duration: 3000,
                 position: 'top-center',
             });
@@ -165,7 +165,7 @@ export default function AdminContacts() {
     const handleUpdateStatus = async (contactId, status) => {
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/contacts/${contactId}/status`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contacts/${contactId}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -175,20 +175,20 @@ export default function AdminContacts() {
             });
 
             if (response.ok) {
-                toast.success(`✅ Status updated to "${status}"`, {
+                toast.success(`Status updated to "${status}"`, {
                     duration: 2000,
                     position: 'top-center',
                 });
                 fetchContacts();
                 fetchStats();
             } else {
-                toast.error('❌ Failed to update status.', {
+                toast.error(' Failed to update status.', {
                     duration: 3000,
                     position: 'top-center',
                 });
             }
         } catch (error) {
-            toast.error('❌ Network error. Failed to update status.', {
+            toast.error(' Network error. Failed to update status.', {
                 duration: 3000,
                 position: 'top-center',
             });

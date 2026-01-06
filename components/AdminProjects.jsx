@@ -38,7 +38,7 @@ const AdminProjects = () => {
     const fetchProjects = async () => {
         setLoading(true);
         try {
-            const response = await fetch('http://localhost:5000/api/projects');
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
             const data = await response.json();
 
             if (data.success) {
@@ -112,8 +112,8 @@ const AdminProjects = () => {
         try {
             const token = localStorage.getItem('adminToken');
             const url = editingProject
-                ? `http://localhost:5000/api/projects/${editingProject._id}`
-                : 'http://localhost:5000/api/projects';
+                ? `${process.env.NEXT_PUBLIC_API_URL}/api/projects/${editingProject._id}`
+                : `${process.env.NEXT_PUBLIC_API_URL}/api/projects`;
 
             const response = await fetch(url, {
                 method: editingProject ? 'PUT' : 'POST',
@@ -161,7 +161,7 @@ const AdminProjects = () => {
             const formData = new FormData();
             formData.append('image', file);
 
-            const response = await fetch(`http://localhost:5000/api/projects/${projectId}/upload-image`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${projectId}/upload-image`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -191,7 +191,7 @@ const AdminProjects = () => {
         setLoading(true);
         try {
             const token = localStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:5000/api/projects/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -10,8 +10,7 @@ export default function Footer() {
     ];
 
     const resourceLinks = [
-        { name: "GitHub", href: "https://github.com/kapilrajkc", icon: <Github className="w-4 h-4" /> },
-        { name: "Blog", href: "/blog", icon: <BookOpen className="w-4 h-4" /> }
+        { name: "GitHub", href: "https://github.com/kapilraj10", icon: <Github className="w-4 h-4" /> },
     ];
 
     return (

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import AdminSidebar from '../../components/AdminSidebar';
-import AdminNavbar from '../../components/AdminNavbar';
 import AdminContacts from '../../components/AdminContacts';
 import AdminStats from '../../components/AdminStats';
 import AdminImages from '../../components/AdminImages';
@@ -79,8 +78,6 @@ export default function AdminDashboard() {
             <AdminSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
             <div className="ml-72">
-                <AdminNavbar />
-
                 <main className="p-8">
                     {/* Welcome Header */}
                     <div className="mb-8">
@@ -161,16 +158,6 @@ export default function AdminDashboard() {
                                             <div>
                                                 <h3 className="font-semibold text-violet-900">System Status</h3>
                                                 <p className="text-sm text-violet-700">All systems operational</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                                        <div className="flex items-center gap-3">
-                                            <Activity className="w-5 h-5 text-blue-600" />
-                                            <div>
-                                                <h3 className="font-semibold text-blue-900">Recent Activity</h3>
-                                                <p className="text-sm text-blue-700">Last cron job: 2 minutes ago</p>
                                             </div>
                                         </div>
                                     </div>
