@@ -219,7 +219,7 @@ export default function AboutUs() {
                         {[...technologies, ...technologies, ...technologies].map((tech, index) => (
                             <div
                                 key={index}
-                                className="group flex-shrink-0 flex flex-col items-center justify-center min-w-[140px] p-6 bg-white/80 backdrop-blur-sm rounded-2xl border-2 border-slate-200 hover:border-violet-500 transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 cursor-pointer"
+                                className="group flex-shrink-0 flex flex-col items-center justify-center min-w-[140px] p-6 bg-white/80 backdrop-blur-sm rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-violet-500/20 hover:-translate-y-2 cursor-pointer"
                             >
                                 <div className="text-5xl mb-3 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                                     {tech.iconUrl ? (
